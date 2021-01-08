@@ -53,7 +53,7 @@
 
                     @if (url()->current() == route('public.single') || ($page && $page->template === 'homepage'))
                         <div class="banner">
-                            {{-- {!! do_shortcode('[banner]slaido_96[/banner]') !!} --}}
+                            {!! do_shortcode('[banner]slaido_96[/banner]') !!}
 
                         </div>
                     @else

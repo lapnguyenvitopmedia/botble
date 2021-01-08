@@ -18,12 +18,12 @@
                 <i class="fa-icon-gear"></i>
                 <a href="?view=global-settings"><?php _e('Global Settings'); ?></a>
             </li>
-            <li class="edit-account">
+            <!-- <li class="edit-account">
                 <i class="fa-icon-user"></i>
                 <a href="#" id="edit_account_link"><?php _e('Edit Account'); ?></a>
-            </li>
+            </li> -->
 		<?php } ?>
-		<li class="logout">
+		<!-- <li class="logout">
 			<i class="fa-icon-sign-out"></i>
 			<a href="<?php echo site_url('c=account&m=logout_action'); ?>"><?php _e('Logout'); ?></a>
 		</li>

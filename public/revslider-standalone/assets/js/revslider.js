@@ -87,6 +87,18 @@ var Revslider = new function() {
                                 content += response.slider;
                             }
 
+                            jQuery.getRevsliderScripts = function(arr, path) {
+                                var _arr = jQuery.map(arr, function(scr) {
+                                    return jQuery.getScript( (path||"") + scr );
+                                });
+
+                                _arr.push(jQuery.Deferred(function( deferred ){
+                                    jQuery( deferred.resolve );
+                                }));
+
+                                return jQuery.when.apply(jQuery, _arr);
+                            }
+
 							jQuery.getRevsliderScripts(revsliderScripts).done(function() {
 								slider.html(content);
 							}).fail(function(xhr, error) {
