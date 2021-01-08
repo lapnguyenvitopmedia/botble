@@ -157,30 +157,8 @@ $latest_js = get_option('revslider-latest-version-jquery', '-');
     if ($isShowDashboard) :
     ?>
 	<!-- DASHBOARD -->
-	<div class="rs-dashboard">
-		<?php
-		$validated = get_option('revslider-valid', 'false');
-        $temp_active = get_option('revslider-temp-active', 'false');
-		$code = get_option('revslider-code', '');
-        //$email = get_option('revslider-email', '');
-		$latest_version = get_option('revslider-latest-version', RevSliderGlobals::SLIDER_REVISION);
 
-		$activewidgetclass = $validated === 'true'? "rs-status-green-wrap" : "rs-status-red-wrap";
-        $activewidgetclass = $temp_active === 'true' ? "rs-status-orange-wrap" : $activewidgetclass;
-
-		get_instance()->load->view('admin/welcome_page');
-
-		$js_validated = get_option('jquery-plugin-code-activated', 'false');
-
-		?>
-
-		<!--
-		THE CURRENT AND NEXT VERSION
-		-->
-		<?php
-
-		$latest_js = get_option('revslider-latest-version-jquery', '1.1');
-
+<<<<<<< HEAD
 		if (version_compare(RevSliderGlobals::SLIDER_REVISION, $latest_version, '<') || version_compare($cur_js, $latest_js, '<') ) {
 			$updateclass = 'rs-status-orange-wrap';
 		} else {
@@ -551,10 +529,13 @@ $latest_js = get_option('revslider-latest-version-jquery', '-');
 
 		<div class="tp-clearfix"></div>
 	</div>
+=======
+>>>>>>> 22d742bfdb609d058d2c6244b06c7f96018cd16d
     <!-- END OF RS DASHBOARD -->
     <?php endif; ?>
 
 	<!-- THE UPDATE HISTORY OF SLIDER REVOLUTION -->
+<<<<<<< HEAD
 	<div style="width:100%;height:40px"></div>
 	<div class="rs-update-history-wrapper">
 		<div class="rs-dash-title-wrap">
@@ -562,6 +543,9 @@ $latest_js = get_option('revslider-latest-version-jquery', '-');
 		</div>
 		<div class="rs-update-history"><?php echo file_get_contents(RS_PLUGIN_PATH.'release_log.html'); ?></div>
 	</div>
+=======
+
+>>>>>>> 22d742bfdb609d058d2c6244b06c7f96018cd16d
 </div>
 
 <!-- Import slider dialog -->

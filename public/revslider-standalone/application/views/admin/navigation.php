@@ -34,7 +34,7 @@
 					<option value="<?php echo $_code; ?>" <?php echo selected(get_language(), $_code); ?>><?php echo $_name; ?></option>
 				<?php endforeach; ?>
 			</select>
-		</li>
+		</li> -->
 	</ul>
 	<?php if(!RS_DEMO){ ?>
 		<?php if ($export_button) : ?>
