@@ -48,8 +48,7 @@ return [
                 ->container('footer')
                 ->usePath()->add('jquery', 'plugins/jquery/jquery.min.js')
                 ->usePath()->add('bootstrap-js', 'plugins/bootstrap/js/bootstrap.min.js', ['jquery'])
-                ->usePath()->add('custom', 'js/custom.min.js', ['jquery'], [], '5.10')
-                ->usePath()->add('ripple.js', 'js/ripple.js', ['jquery'], [], '5.10');
+                ->usePath()->add('custom.js', 'js/custom.js', ['jquery'], [], '5.10');
 
             $theme
                 ->asset()

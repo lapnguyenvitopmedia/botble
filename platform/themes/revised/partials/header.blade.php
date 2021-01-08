@@ -26,4 +26,21 @@
     <!--[if IE 8]><body class="ie8 lt-ie9 lt-ie10"><![endif]-->
     <!--[if IE 9]><body class="ie9 lt-ie10"><![endif]-->
     <body>
+        <div class="container">
+            <div class="row menutop">menu</div>
+            <div class="row mainmenu">mainmenu</div>
+            <div class="row">
+                @if (url()->current() == route('public.single') || ($page && $page->template === 'homepage'))
+                        home page
+                @else
+                    <div class="home_banner" style="background-image: url({{ theme_option('home_banner') ? RvMedia::getImageUrl(theme_option('home_banner')) : Theme::asset()->url('images/banner.jpg') }})">
+                        <div class="topsearch">
+                            @if (theme_option('home_banner_description'))
+                                <h1 class="text-center text-white mb-4" style="font-size: 36px; font-weight: 600;">{{ theme_option('home_banner_description') }}</h1>
+                            @endif
+                        </div>
+                    </div>
+                    </div>
+                @endif
+            </div>
         

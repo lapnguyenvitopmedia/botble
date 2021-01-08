@@ -1,6 +1,6 @@
 <?php
 
-namespace Theme\Newtheme\Http\Controllers;
+namespace Theme\Revised\Http\Controllers;
 
 use Botble\Base\Http\Responses\BaseHttpResponse;
 use Botble\Blog\Repositories\Interfaces\PostInterface;
@@ -10,7 +10,7 @@ use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Http\Request;
 use Theme;
 
-use Theme\Newtheme\Models\Post as Post;
+use Theme\Revised\Models\Post as Post;
 
 class ExampleController extends PublicController
 {

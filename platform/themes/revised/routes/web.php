@@ -2,7 +2,7 @@
 
 // Custom routes
 // You can delete this route group if you don't need to add your custom routes.
-Route::group(['namespace' => 'Theme\Newtheme\Http\Controllers', 'middleware' => ['web', 'core']], function () {
+Route::group(['namespace' => 'Theme\Revised\Http\Controllers', 'middleware' => ['web', 'core']], function () {
     Route::group(apply_filters(BASE_FILTER_GROUP_PUBLIC_ROUTE, []), function () {
 
         // Add your custom route here
@@ -13,7 +13,7 @@ Route::group(['namespace' => 'Theme\Newtheme\Http\Controllers', 'middleware' => 
 
 Theme::routes();
 
-Route::group(['namespace' => 'Theme\Newtheme\Http\Controllers', 'middleware' => ['web', 'core']], function () {
+Route::group(['namespace' => 'Theme\Revised\Http\Controllers', 'middleware' => ['web', 'core']], function () {
     Route::group(apply_filters(BASE_FILTER_GROUP_PUBLIC_ROUTE, []), function () {
 
         Route::get('/', 'ExampleController@getIndex')->name('public.index');
@@ -37,7 +37,7 @@ Route::group(['namespace' => 'Theme\Newtheme\Http\Controllers', 'middleware' => 
 Route::group([
     'middleware' => 'api',
     'prefix'     => 'api/v1',
-    'namespace'  => 'Theme\Newtheme\Http\Controllers',
+    'namespace'  => 'Theme\Revised\Http\Controllers',
 ], function () {
     Route::get('search', 'ExampleController@getSearch')->name('public.api.search');
 });
