@@ -27,7 +27,7 @@ var Revslider = new function() {
 
 	var t = this;
 	var cssSelector = '.revslider';
-	var apiUrl ='index.php?c=embed';
+	var apiUrl = 'index.php?c=embed';
     var loadedAssets = [];
 
 	t.init = function() {
@@ -85,17 +85,6 @@ var Revslider = new function() {
                             }
 							if (typeof response.slider != 'undefined') {
                                 content += response.slider;
-                            }
-                            jQuery.getRevsliderScripts = function(arr, path) {
-                                var _arr = jQuery.map(arr, function(scr) {
-                                    return jQuery.getScript( (path||"") + scr );
-                                });
-
-                                _arr.push(jQuery.Deferred(function( deferred ){
-                                    jQuery( deferred.resolve );
-                                }));
-
-                                return jQuery.when.apply(jQuery, _arr);
                             }
 
 							jQuery.getRevsliderScripts(revsliderScripts).done(function() {

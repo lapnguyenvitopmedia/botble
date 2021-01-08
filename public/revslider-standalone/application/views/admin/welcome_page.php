@@ -1,6 +1,6 @@
 <a name="activateaddon"></a>
 
-<?php
+<?php 
 $validated = get_option('revslider-valid', 'false');
 $temp_active = get_option('revslider-temp-active', 'false');
 $code = get_option('revslider-code', '');
@@ -11,18 +11,18 @@ $activewidgetclass = $temp_active === 'true' ? "rs-status-orange-wrap" : $active
 ?>
 <!-- VALIDATION WIDGET -->
 <div class="rs-dash-widget rs-dash-doublewidget">
-
+	
 	<div class="rs-dash-title-wrap">
 		<div class="rs-dash-title <?php echo (check_for_jquery_addon() ? 'rs-green' : 'rs-red'); ?>"><?php _e("Visual Editor Addon Enabling & Activation",'revslider'); ?></div>
 		<div class="rs-dash-more-buttons-wrapper">
 			<?php if ($temp_active == 'true') { ?>
                 <div class="rs-dash-title-button rs-status-orange"><i class="icon-no-problem-found"></i><?php _e("Editor Temporarily Activated",'revslider'); ?></div>
 			<?php } elseif ($validated==='true') { ?>
-				<div  class="rs-dash-title-button rs-green"><i class="icon-no-problem-found"></i><?php _e("Editor Activated",'revslider'); ?></div>
-			<?php } else { ?>
+				<div  class="rs-dash-title-button rs-green"><i class="icon-no-problem-found"></i><?php _e("Editor Activated",'revslider'); ?></div>			
+			<?php } else { ?>		
 				<div  class="rs-dash-title-button rs-red"><i class="icon-not-registered"></i><?php _e("Editor Not Activated",'revslider'); ?></div>
 			<?php } ?>
-			<?php if (!check_for_jquery_addon()) { ?>
+			<?php if (!check_for_jquery_addon()) { ?>	
 				<div  class="rs-dash-title-button rs-red"><i class="icon-not-registered"></i><?php _e("Slider Not Installed",'revslider'); ?></div>
 			<?php } else { ?>
 				<?php if (is_jquery_addon_temp_activated()){ ?>
@@ -31,11 +31,11 @@ $activewidgetclass = $temp_active === 'true' ? "rs-status-orange-wrap" : $active
 					<div  class="rs-dash-title-button rs-green"><i class="icon-no-problem-found"></i><?php _e("Slider Activated",'revslider'); ?></div>
 				<?php } else { ?>
 					<div  class="rs-dash-title-button rs-red"><i class="icon-not-registered"></i><?php _e("Slider Not Activated",'revslider'); ?></div>
-				<?php  } ?>
-			<?php } ?>
+				<?php  } ?> 				
+			<?php } ?>			
 		</div>
 	</div>
-
+	
 	<div class="rs-dash-widget-default-view-wrap">
 		<div class="rs-dash-widget-inner">
 			<?php if (!check_for_jquery_addon()) { ?>
@@ -51,7 +51,7 @@ $activewidgetclass = $temp_active === 'true' ? "rs-status-orange-wrap" : $active
 					<div><?php _e("You are ready to use the addon", 'revslider'); ?></div>
 				</div>
 			<?php } ?>
-
+			
 			<?php if(!RS_DEMO){ ?>
 				<div class="rs-dash-bottom-wrapper">
 					<div><?php _e("If you don't have a Slider Revolution jQuery Purchase Code:", 'revslider'); ?></div>
@@ -75,45 +75,45 @@ $activewidgetclass = $temp_active === 'true' ? "rs-status-orange-wrap" : $active
 
 
 		<div class="rs-dash-widget-inner">
-
+		
 			<div class="rs-dash-icon rs-dash-refresh"></div>
 			<div class="rs-dash-content-with-icon">
 				<div class="rs-dash-strong-content"><?php _e("Slider Revolution jQuery Purchase Code",'revslider'); ?></div>
 				<div><?php _e("You can learn how to find your purchase key <a target='_blank' href='http://www.themepunch.com/faq/where-to-find-the-purchase-code/'>here</a>",'revslider'); ?></div>
 			</div>
-			<div class="rs-dash-content-space"></div>
+			<div class="rs-dash-content-space"></div>				
 			<?php if(!RS_DEMO){ ?>
-				<input type="text" value="<?php echo get_option('jquery-plugin-code'); ?>" name="addon_purchase_token" class="rs-dashboard-input" <?php echo is_jquery_addon_activated() ? 'readonly="readonly"' : ''; ?> style="width:<?php echo is_jquery_addon_activated()=='true' ? '322px' : '273px'; ?>;margin-right:10px" />
-				<span style="display:none" id="rs_purchase_validation" class="loader_round"><?php _e('Please Wait...', 'revslider'); ?></span>
+				<input type="text" value="<?php echo get_option('jquery-plugin-code'); ?>" name="addon_purchase_token" class="rs-dashboard-input" <?php echo is_jquery_addon_activated() ? 'readonly="readonly"' : ''; ?> style="width:<?php echo is_jquery_addon_activated()=='true' ? '322px' : '273px'; ?>;margin-right:10px" />			
+				<span style="display:none" id="rs_purchase_validation" class="loader_round"><?php _e('Please Wait...', 'revslider'); ?></span>					
 				<?php
-				if (is_jquery_addon_activated()){
+				if (is_jquery_addon_activated()){ 
 					?>
-					<a href="javascript:void(0);" id="deactivate_addon" class="rs-dash-button"><?php _e('Deregister','revslider'); ?></a>
+					<a href="javascript:void(0);" id="deactivate_addon" class="rs-dash-button"><?php _e('Deregister','revslider'); ?></a>			
 				<?php }else{ ?>
-					<a href="javascript:void(0);" id="download_addon" class="rs-dash-button"><?php _e('Register & Install','revslider'); ?></a>
+					<a href="javascript:void(0);" id="download_addon" class="rs-dash-button"><?php _e('Register & Install','revslider'); ?></a>							
 				<?php } ?>
 			<?php } ?>
-			<div class="rs-dash-content-space"></div>
+			<div class="rs-dash-content-space"></div>	
 
 			<div class="rs-dash-icon rs-dash-buket"></div>
 			<div class="rs-dash-content-with-icon">
 				<div class="rs-dash-strong-content"><?php _e("Visual Editor Addon Purchase Code",'revslider'); ?></div>
 				<div><?php _e("You can learn how to find your purchase key <a target='_blank' href='http://www.themepunch.com/faq/where-to-find-the-purchase-code/'>here</a>",'revslider'); ?></div>
 			</div>
-			<div class="rs-dash-content-space"></div>
+			<div class="rs-dash-content-space"></div>				
 			<?php if(!RS_DEMO){ ?>
-				<input type="text" name="rs-validation-token" class="rs-dashboard-input" value="<?php echo $code; ?>" <?php echo ($validated === 'true') ? ' readonly="readonly"' : ''; ?> style="width: <?php echo ($validated !== 'true') ? '330px' : '322px' ?>;margin-right:10px" />
-				<span style="display:none" id="rs_purchase_validation" class="loader_round"><?php _e('Please Wait...', 'revslider'); ?></span>
-				<a href="javascript:void(0);" <?php echo ($validated !== 'true') ? '' : 'style="display: none;"'; ?> id="rs-validation-activate" class="rs-dash-button"><?php _e('Register','revslider'); ?></a>
+				<input type="text" name="rs-validation-token" class="rs-dashboard-input" value="<?php echo $code; ?>" <?php echo ($validated === 'true') ? ' readonly="readonly"' : ''; ?> style="width: <?php echo ($validated !== 'true') ? '330px' : '322px' ?>;margin-right:10px" />				
+				<span style="display:none" id="rs_purchase_validation" class="loader_round"><?php _e('Please Wait...', 'revslider'); ?></span>					
+				<a href="javascript:void(0);" <?php echo ($validated !== 'true') ? '' : 'style="display: none;"'; ?> id="rs-validation-activate" class="rs-dash-button"><?php _e('Register','revslider'); ?></a>				
 				<a href="javascript:void(0);" <?php echo ($validated === 'true') ? '' : 'style="display: none;"'; ?> id="rs-validation-deactivate" class="rs-dash-button"><?php _e('Deregister','revslider'); ?></a>
 			<?php } ?>
-		</div>
+		</div>		
 	</div>
-
+	
 	<?php if(!RS_DEMO){ ?>
 		<div class="rs-dash-widget-extra-view-wrap">
 			<div class="rs-dash-widget-inner">
-
+				
 				<div class="rs-dash-icon rs-dash-light"></div>
 				<div class="rs-dash-content-with-icon">
 					<div class="rs-dash-strong-content"><?php echo "Manual Installation"; ?></div>
@@ -127,34 +127,34 @@ $activewidgetclass = $temp_active === 'true' ? "rs-status-orange-wrap" : $active
 				<form action="<?php echo site_url('c=admin&m=upload_addon', 'revslider') ?>" enctype="multipart/form-data" method="post">
 					<div class="rs-dash-icon rs-dash-download"></div>
 					<div class="rs-dash-content-with-icon">
-						<div class="rs-dash-strong-content"><?php _e("Select the visual-editor-extension.zip file",'revslider'); ?></div>
-
-						<input type="file" style="width: 350px;" value="" name="addon_file" class="input_import_slider">
+						<div class="rs-dash-strong-content"><?php _e("Select the visual-editor-extension.zip file",'revslider'); ?></div>				
+						
+						<input type="file" style="width: 350px;" value="" name="addon_file" class="input_import_slider">					
 					</div>
-					<div class="rs-dash-content-space"></div>
+					<div class="rs-dash-content-space"></div>	
 					<div></div>
-
+					
 					<div class="rs-dash-bottom-wrapper">
 						<input type="submit" class="rs-dash-button rev-import-slider-button" value="<?php _e("Upload",'revslider'); ?>">
 						<span id="hide-manual-installation" class="rs-dash-button"><?php _e('Back to Code Registration','revslider'); ?></span>
 					</div>
-				</form>
+				</form>					
 			</div>
 		</div>
 
 		<script>
-			jQuery(document).ready(function() {
+			jQuery(document).ready(function() {			
 
-				jQuery('#show-manual-installation').click(function() {
+				jQuery('#show-manual-installation').click(function() {				
 					punchgs.TweenLite.to(jQuery('.rs-dash-widget-default-view-wrap'),0.5,{opacity:1,x:-960,ease:punchgs.Power3.easeInOut});
 					punchgs.TweenLite.fromTo(jQuery('.rs-dash-widget-extra-view-wrap'),0.5,{display:"block",autoAlpha:0,x:960},{autoAlpha:1,x:0,ease:punchgs.Power3.easeInOut});
 				});
-				jQuery('#hide-manual-installation').click(function() {
+				jQuery('#hide-manual-installation').click(function() {				
 					punchgs.TweenLite.to(jQuery('.rs-dash-widget-default-view-wrap'),0.5,{autoAlpha:1,x:0,ease:punchgs.Power3.easeInOut});
 					punchgs.TweenLite.to(jQuery('.rs-dash-widget-extra-view-wrap'),0.5,{autoAlpha:0,x:960,ease:punchgs.Power3.easeInOut});
 				})
 			});
 		</script>
 	<?php } ?>
-
-</div>
+	
+</div><!-- END OF VALIDATION WIDGET -->

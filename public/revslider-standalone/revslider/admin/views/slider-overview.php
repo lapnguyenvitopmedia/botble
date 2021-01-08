@@ -187,7 +187,7 @@ $latest_js = get_option('revslider-latest-version-jquery', '-');
 			$updateclass = 'rs-status-green-wrap';
 		}
 		?>
-		<!-- <div class="rs-dash-widget" id="updates_dw">
+		<div class="rs-dash-widget" id="updates_dw">
 			<div class="rs-dash-title-wrap <?php echo $updateclass; ?>">
 				<div class="rs-dash-title"><?php _e("Plugin Updates",'revslider'); ?></div>
 				<div class="rs-dash-title-button rs-status-orange"><i class="icon-update-refresh"></i><?php _e("Update Available",'revslider'); ?></div>
@@ -255,11 +255,11 @@ $latest_js = get_option('revslider-latest-version-jquery', '-');
 					</div>
 				<?php } ?>
 			</div>
-		</div> -->
+		</div><!-- END OF VERSION INFORMATION WIDGET -->
 
 
 		<!-- Requirements & Recommendations -->
-		<!-- <div class="rs-dash-widget" id="system_dw">
+		<div class="rs-dash-widget" id="system_dw">
 			<?php
 				$dir = wp_upload_dir();
 				$mem_limit = ini_get('memory_limit');
@@ -386,13 +386,13 @@ $latest_js = get_option('revslider-latest-version-jquery', '-');
 				}
 				?>
 			</div>
-		</div> -->
+		</div><!-- END OF Requirements & Recommendations -->
 
 
 		<!--
 		TEMPLATE WIDGET
 		-->
-		<!-- <div id="templates_dw" class="rs-dash-widget">
+		<div id="templates_dw" class="rs-dash-widget">
 			<div class="templatestore-bg"></div>
 			<div class="rs-dash-title-wrap" style="position:relative; z-index:1">
 				<div class="rs-dash-title"><?php _e("Start Downloading Templates",'revslider'); ?></div>
@@ -445,12 +445,12 @@ $latest_js = get_option('revslider-latest-version-jquery', '-');
 				</div>
 			</div>
 
-		</div> -->
+		</div><!-- END TEMPLATE WIDGET -->
 
 		<!--
 		NEWSLETTER
 		-->
-		<!-- <div class="rs-dash-widget" id="newsletter_dw">
+		<div class="rs-dash-widget" id="newsletter_dw">
 			<div class="rs-dash-title-wrap">
 				<div class="rs-dash-title"><?php _e("ThemePunch Newsletter",'revslider'); ?></div>
 			</div>
@@ -480,13 +480,13 @@ $latest_js = get_option('revslider-latest-version-jquery', '-');
 				</div>
 			</div>
 
-		</div> -->
+		</div><!-- END OF NEWSLETTER  -->
 
 
 		<!--
 		PRODUCT SUPPORT
 		-->
-		<!-- <div class="rs-dash-widget" id="support_dw">
+		<div class="rs-dash-widget" id="support_dw">
 			<div class="rs-dash-title-wrap">
 				<div class="rs-dash-title"><?php _e("Product Support",'revslider'); ?></div>
 			</div>
@@ -533,10 +533,10 @@ $latest_js = get_option('revslider-latest-version-jquery', '-');
 
 			</div>
 
-		</div> -->
+		</div><!-- END OF PRODUCT SUPPORT  -->
 
 		<!-- PRIVACY POLICY -->
-		<!-- <div class="rs-dash-widget">
+		<div class="rs-dash-widget">
 			<div class="rs-dash-title-wrap">
 				<div class="rs-dash-title"><?php _e("Privacy Policy",'revslider'); ?></div>
 			</div>
@@ -546,7 +546,7 @@ $latest_js = get_option('revslider-latest-version-jquery', '-');
 					<a href="#" class="rs-dash-button" id="privacy_policy"><?php _e('Read Suggested Privacy Policy', 'revslider'); ?></a>
 				</div>
 			</div>
-		</div> -->
+		</div>
 		<!-- END OF PRIVACY POLICY -->
 
 		<div class="tp-clearfix"></div>
@@ -555,13 +555,13 @@ $latest_js = get_option('revslider-latest-version-jquery', '-');
     <?php endif; ?>
 
 	<!-- THE UPDATE HISTORY OF SLIDER REVOLUTION -->
-	<!-- <div style="width:100%;height:40px"></div>
+	<div style="width:100%;height:40px"></div>
 	<div class="rs-update-history-wrapper">
 		<div class="rs-dash-title-wrap">
 			<div class="rs-dash-title"><?php _e("Update History",'revslider'); ?></div>
 		</div>
 		<div class="rs-update-history"><?php echo file_get_contents(RS_PLUGIN_PATH.'release_log.html'); ?></div>
-	</div> -->
+	</div>
 </div>
 
 <!-- Import slider dialog -->

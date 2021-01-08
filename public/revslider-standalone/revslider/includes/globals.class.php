@@ -11,7 +11,7 @@ define("REVSLIDER_TEXTDOMAIN","revslider"); //just here for fallback reasons of 
 
 class RevSliderGlobals{
 
-    const SLIDER_REVISION = '5.4.8';
+    const SLIDER_REVISION = '5.4.8.1';
     const RS_PLUGIN_SLUG = 'visual-editor';
 
 	const TABLE_SLIDERS_NAME = "sliders";
