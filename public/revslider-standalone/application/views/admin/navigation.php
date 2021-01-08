@@ -1,6 +1,6 @@
 <div id="navigation">
 	<ul id="user">
-		 <!-- <li class="slider-overview"><?php _e('Hello'); ?>, <?php echo $user['username']; ?>!</li> -->
+		<li class="slider-overview"><?php _e('Hello'); ?>, <?php echo $user['username']; ?>!</li>
         <li>
             <i class="fa-icon-file-image-o"></i>
             <a href="?view=sliders"><?php _e('Slider Overview'); ?></a>
@@ -26,7 +26,7 @@
 		<!-- <li class="logout">
 			<i class="fa-icon-sign-out"></i>
 			<a href="<?php echo site_url('c=account&m=logout_action'); ?>"><?php _e('Logout'); ?></a>
-		</li> -->
+		</li>
 		<li class="languages">
 			<i class="fa-icon-globe"></i>
 			<select id="language">
@@ -34,7 +34,7 @@
 					<option value="<?php echo $_code; ?>" <?php echo selected(get_language(), $_code); ?>><?php echo $_name; ?></option>
 				<?php endforeach; ?>
 			</select>
-		</li>
+		</li> -->
 	</ul>
 	<?php if(!RS_DEMO){ ?>
 		<?php if ($export_button) : ?>

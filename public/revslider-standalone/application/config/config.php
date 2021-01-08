@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= '';
+$config['base_url']	= 'http://botble.top/revslider-standalone/';
 
 /*
 |--------------------------------------------------------------------------
@@ -228,7 +228,7 @@ $config['cache_path'] = '';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
-$config['encryption_key'] = 'c77169ca8b871f4da0b69b53835331328c23fc843337b7467c71c9f81b0546df8aff1d8745aa74e9f30995644061829693dec18c771b4106aa23644c097869ea4f829cdd4210dcb2c96f55ef2e6e99ef245b38da6aad84cda26086a623db034dd5284c3d03ac43ad19190d13315d54baeb5a5a30d10e49a0c07637a7683620c6';
+$config['encryption_key'] = '73801cac5c7891d73e6fc932cdf21effc94e84131e1172af7e9c43a9acc70867c3d7b08ea3fbe74855fd35224813d6bc9d455fd1621741cd7f3197544796eb95349f65442d5ca68392d910fd7555fcda40e3be2f5a2eaa2aad5acc95c545c3d46363d8c254d5114c1b45252745e68d31671e6f498b44b20f92b377bc4c164be6';
 
 /*
 |--------------------------------------------------------------------------

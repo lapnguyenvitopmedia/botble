@@ -48,10 +48,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = '';
-$db['default']['database'] = 'cms';
+$db['default']['hostname'] = '118.69.226.194:20306';
+$db['default']['username'] = 'admin_vtf';
+$db['default']['password'] = 'admin_vtfpass';
+$db['default']['database'] = 'admin_vtfdb';
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = 'revslider_';
 $db['default']['pconnect'] = TRUE;
