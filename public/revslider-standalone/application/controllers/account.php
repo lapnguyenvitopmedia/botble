@@ -24,8 +24,7 @@ class Account extends RS_Controller {
 	 * Index Page for this controller.
 	 */
 	public function index() {
-		// $this->login();
-        // $this->login_action();
+		$this->login();
 	}
 
 	/**
@@ -33,18 +32,28 @@ class Account extends RS_Controller {
 	 */
 	public function login()
 	{
-        $data = array(
-			'username' => 'admin',
-			'password' => 'admin123',
+<<<<<<< HEAD
+		$data = array(
+			'username' => 'admin@gmail.com',
+			'password' => '123123',
 		);
 		$this->load->model('user_model', 'user');
 		$user = $this->user->login($data['username'], $data['password']);
 		if ( $user )
+=======
+		$data = $this->session->userdata('data');
+		$data['error'] = $this->session->userdata('error');
+		$this->session->unset_userdata('error');
+		if ( !isset($data['username']))
+>>>>>>> 22d742bfdb609d058d2c6244b06c7f96018cd16d
 		{
-			$this->session->set_userdata('user_id', $user['id']);
-			redirect( 'page=revslider' );
-			die();
+			$data = array(
+				'username'	=> '',
+				'password'	=> '',
+				'error'	=> '',
+			);
 		}
+<<<<<<< HEAD
 		else
 		{
 			$this->session->set_userdata('data', $data);
@@ -52,25 +61,13 @@ class Account extends RS_Controller {
 			redirect('c=account&m=login');
 			die();
         }
-
-		// $data = $this->session->userdata('data');
-		// $data['error'] = $this->session->userdata('error');
-		// $this->session->unset_userdata('error');
-		// if ( !isset($data['username']))
-		// {
-		// 	$data = array(
-		// 		'username'	=> '',
-		// 		'password'	=> '',
-		// 		'error'	=> '',
-		// 	);
-
-		// }
-		// $this->load->view('account/html', array(
-		// 	'version'	=> RevSliderGlobals::SLIDER_REVISION,
-		// 	'view_html'	=> $this->load->view('account/login', $data, TRUE)
-		// ));
+=======
+		$this->load->view('account/html', array(
+			'version'	=> RevSliderGlobals::SLIDER_REVISION,
+			'view_html'	=> $this->load->view('account/login', $data, TRUE)
+		));
+>>>>>>> 22d742bfdb609d058d2c6244b06c7f96018cd16d
 	}
-
 
 	/**
 	 * Login action
@@ -82,21 +79,21 @@ class Account extends RS_Controller {
 			'username' => $this->input->post('username'),
 			'password' => $this->input->post('password'),
 		);
-		$this->load->model('user_model', 'user');
-		$user = $this->user->login($data['username'], $data['password']);
-		if ( $user )
-		{
-			$this->session->set_userdata('user_id', $user['id']);
-			redirect( 'page=revslider' );
-			die();
-		}
-		else
-		{
-			$this->session->set_userdata('data', $data);
-			$this->session->set_userdata('error', __('Incorrect login details. Please try again.') );
-			redirect('c=account&m=login');
-			die();
-		}
+
+		if ( !empty($data['username']) && !empty($data['password']) ) {
+            $this->load->model('user_model', 'user');
+            $user = $this->user->login($data['username'], $data['password']);
+            if ( $user ) {
+                $this->session->set_userdata('user_id', $user['id']);
+                redirect( 'page=revslider' );
+                die();
+            }
+        }
+
+        $this->session->set_userdata('data', $data);
+        $this->session->set_userdata('error', __('Incorrect login details. Please try again.') );
+        redirect('c=account&m=login');
+        die();
 	}
 
 	/**
