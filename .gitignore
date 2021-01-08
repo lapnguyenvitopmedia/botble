@@ -1,6 +1,5 @@
 /node_modules
 /public/hot
-/public/storage
 /storage/*.key
 /vendor
 .DS_Store
@@ -25,8 +24,6 @@ __MACOSX
 /.phpintel
 /.php_cs.cache
 
-public/vendor/core
-
 _ide_helper.php
 package-lock.json
 yarn.lock
@@ -36,7 +33,6 @@ storage/settings.json
 
 public/mix-manifest.json
 
-public/themes
 /storage/installing
 public/docs
 resources/docs
@@ -47,3 +43,4 @@ resources/docs
 /log
 
 storage/framework/laravel-excel/
+/nbproject/private/
