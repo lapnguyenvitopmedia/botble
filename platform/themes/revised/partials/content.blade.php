@@ -1,5 +1,5 @@
 <div class="row">
-    
+
 </div>
 <div class="row">
     <div class="inner-container">{!! Theme::content() !!}</div>
@@ -19,12 +19,13 @@
                                             <div class="cover_title">
                                                 <span class="title">'.$cates[$i]->name.'</span>
                                                 <div class="discover">
-                                                    <a href="'.$cates[$i]->url.'">Discover 
+                                                    <a href="'.$cates[$i]->url.'">Discover
                                                         <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
                                                     </a>
+
                                                 </span>
                                             </div>
-                                        </div>    
+                                          </div>
                                     </li>';
                             }
                         @endphp
@@ -32,7 +33,7 @@
                 </div>
             </div>
         @endif
-        
+
     </div>
 </div>
 

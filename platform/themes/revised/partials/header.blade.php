@@ -37,11 +37,13 @@
                     !!}
                 </div>
                 <div class="col-md-3">
-                    <div class="header_search">
-                        <i class="fa fa-search"></i> 
-                        <input class="input_search" type="text" placeholder="search..." />
+                    <div class="top-right-header">
+                        <div class="header_search">
+                            <i class="fa fa-search"></i> 
+                            <input class="input_search" type="text" placeholder="search..." />
+                        </div>
+                        {!! apply_filters('language_switcher') !!}
                     </div>
-                    {!! apply_filters('language_switcher') !!}
                 </div>
             </div>
             <div class="row ">

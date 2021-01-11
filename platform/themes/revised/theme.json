@@ -5,6 +5,11 @@
     "author": "",
     "version": "0.0",
     "required_plugins": [
-        
+         "blog",
+        "contact",
+        "gallery",
+        "language",
+        "block",
+        "member"
     ]
 }
