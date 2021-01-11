@@ -41,6 +41,7 @@ class ExampleController extends PublicController
     public function getView(BaseHttpResponse $response, $key = null)
     {
         return parent::getView($response, $key);
+        
     }
 
     /**
