@@ -50,7 +50,9 @@
                 </div>
             </div>
             <div class="row">
-
+                    @php
+                        $page = Theme::get('page');
+                    @endphp
                     @if (url()->current() == route('public.single') || ($page && $page->template === 'homepage'))
                         <div class="banner">
                             {!! do_shortcode('[banner]slaido_96[/banner]') !!}
