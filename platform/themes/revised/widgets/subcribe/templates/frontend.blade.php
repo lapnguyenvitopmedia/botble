@@ -1,21 +1,6 @@
-<style>
-    input[type=text] {
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      box-sizing: border-box;
-      border: none;
-      border-bottom: 2px solid #666666;
-    }
-    input[type="submit"] {
-    margin-left: -50px;
-    height: 20px;
-    width: 50px;
-    }
-}
-    </style>
+
 <div class="col-md-3 col">
-<div class="aside-box">
+<div class="aside-box footer_search">
     <div class="aside-box-header">
         <h3>{{ $config['name'] }}</h3>
     </div>
