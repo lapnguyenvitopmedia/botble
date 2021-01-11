@@ -30,7 +30,7 @@
             <div class="row">
                 <div class="topmenu">
                     {!!
-                        Menu::renderMenuLocation('header-menu', [  
+                        Menu::renderMenuLocation('header-menu', [
                             'options' => [],
                             'theme'   => true,
                         ])
@@ -39,30 +39,29 @@
             </div>
             <div class="row ">
                 <div class="mainmenu">
-                    
+
                     {!!
-                        Menu::renderMenuLocation('main-menu', [ 
+                        Menu::renderMenuLocation('main-menu', [
                             'options' => [],
                             'theme'   => true
                         ])
                     !!}
-    
+
                 </div>
             </div>
             <div class="row">
-                
+
                     @if (url()->current() == route('public.single') || ($page && $page->template === 'homepage'))
                         <div class="banner">
-                            banner aniamtion
+                            {!! do_shortcode('[banner]showcase-carousel[/banner]') !!}
 
                         </div>
                     @else
                         <div class="category_image" style="background-image: url({{ theme_option('home_banner') ? RvMedia::getImageUrl(theme_option('home_banner')) : Theme::asset()->url('images/banner.jpg') }})">
-                            
+
                         </div>
                         <div class="slider product">
-                            
+
                         </div>
                     @endif
             </div>
-        
