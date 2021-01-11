@@ -26,7 +26,66 @@ theme_option()->setField([
                 'data-counter' => 255,
             ],
         ],
-    ]);
+
+    ])
+    ->setField([
+        'id'         => 'address',
+        'section_id' => 'opt-text-subsection-general',
+        'type'       => 'text',
+        'label'      => __('Address'),
+        'attributes' => [
+            'name'    => 'address',
+            'value'   => null,
+            'options' => [
+                'class'        => 'form-control',
+                'data-counter' => 255,
+            ],
+        ],
+    ])
+    ->setField([
+        'id'         => 'website',
+        'section_id' => 'opt-text-subsection-general',
+        'type'       => 'url',
+        'label'      => __('Website'),
+        'attributes' => [
+            'name'    => 'website',
+            'value'   => null,
+            'options' => [
+                'class'        => 'form-control',
+                'data-counter' => 255,
+            ],
+        ],
+    ])
+    ->setField([
+        'id'         => 'contact_email',
+        'section_id' => 'opt-text-subsection-general',
+        'type'       => 'email',
+        'label'      => __('Email'),
+        'attributes' => [
+            'name'    => 'contact_email',
+            'value'   => null,
+            'options' => [
+                'class'        => 'form-control',
+                'data-counter' => 120,
+            ],
+        ],
+    ])
+    ->setField([
+        'id'         => 'hotline',
+        'section_id' => 'opt-text-subsection-general',
+        'type'       => 'text',
+        'label'      => 'Hotline',
+        'attributes' => [
+            'name'    => 'hotline',
+            'value'   => null,
+            'options' => [
+                'class'        => 'form-control',
+                'placeholder'  => 'Hotline',
+                'data-counter' => 30,
+            ],
+        ],
+    ])
+;
 
 add_shortcode('a-shortcode', 'A short code', 'A short code', function ($shortCode) {
     //return 'content of shortcode is here';
