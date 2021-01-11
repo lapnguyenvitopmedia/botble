@@ -1,9 +1,0 @@
-{
-    "name": "Revslider",
-    "namespace": "Botble\\Revslider\\",
-    "provider": "Botble\\Revslider\\Providers\\RevsliderServiceProvider",
-    "author": "N/A",
-    "url": "N/A",
-    "version": "1.0",
-    "description": "The description for module revslider"
-}

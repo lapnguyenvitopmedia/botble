@@ -1,4 +1,9 @@
 <?php
+register_sidebar([
+    'id'          => 'footer_sidebar',
+    'name'        => __('Footer sidebar'),
+    'description' => __('This is footer sidebar section'),
+]);
 
 register_page_template([
     'no-sidebar' => __('Noo sidebar'),
