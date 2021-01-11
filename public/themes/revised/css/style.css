@@ -5,6 +5,11 @@
 body {
     font-family: Quicksand
 }
+
+.container {
+    width: 1920px
+}
+
 .topmenu {
     height: 50px;
     border: 1px solid gray;
@@ -123,8 +128,8 @@ body {
     border: 1px solid red;
 }
 
-.fa {
-        margin-right: 30px;
+.footer_info .col .fa {
+    margin-right: 30px;
 }
 
 .inner-container {
