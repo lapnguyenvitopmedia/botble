@@ -1,4 +1,79 @@
+@font-face {
+  font-family: Quicksand;
+  src: url(../fonts/Quicksand-Medium.ttf);
+}
+body {
+    font-family: Quicksand
+}
+.topmenu {
+    height: 50px;
+    border: 1px solid gray;
+    display: inline-block;
+    width:100%
+    width:100%;
+    background: black;
+    text-transform: uppercase;
+}
 
+.topmenu li {
+    display: inline-block;
+    width: 50px;
+    padding-right: 30px;
+}
+
+.topmenu li a{
+    color:white;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.topmenu li a:hover {
+    text-decoration: none;
+    color: green
+}
+
+.mainmenu {
+    height: 130px;
+    border: 1px solid gray;
+    display: inline-block;
+    width:100%
+    text-transform: uppercase;
+    text-align: center;
+    background-image: url("../images/logo.jpg");
+    background-repeat: no-repeat;
+    background-position: 34px 21px;
+}
+
+.mainmenu ul {
+    display: inline-block;
+    padding-left: 60px;
+        margin-top: 47px;
+}
+
+.mainmenu li {
+    display: inline-block;
+    width: 70px;
+    padding-right: 30px;
+}
+
+.mainmenu li a{
+    color: black;
+    padding-bottom: 55px;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.1em
+}
+
+.mainmenu li a:hover span{
+    border-bottom: none;
+}
+
+.mainmenu li a:hover {
+    color: green;
+    border-bottom: 3px solid green;
+    text-decoration: none;
+}
+/*
 .topmenu {
     height: 50px;
     border: 1px solid gray;
@@ -10,7 +85,7 @@
     display: inline-block;
     width: 50px;
 }
-
+*/
 .mainmenu {
     height: 130px;
     border: 1px solid gray;
