@@ -10,13 +10,19 @@ body {
     width: 1920px
 }
 
+.cover_topmenu {
+    background: black;
+}
+
 .topmenu {
     height: 50px;
-    border: 1px solid gray;
     display: inline-block;
-    width:100%;
-    background: black;
     text-transform: uppercase;
+}
+
+.topmenu ul {
+    margin-top: 10px;
+    padding-left: 196px
 }
 
 .topmenu li {
@@ -33,6 +39,33 @@ body {
 .topmenu li a:hover {
     text-decoration: none;
     color: green
+}
+
+.header_search i {
+    font-sise: 20px;
+}
+.header_search .input_search {
+    background: none;
+    border: none;
+    border-bottom: 1px solid darkgray;
+}
+
+.header_search .input_search:focus {
+    border: none;
+    border-bottom: 1px solid darkgray;
+}
+
+.language_bar_list {
+    display: inline-block;
+    padding: 0px;
+}
+.language_bar_list li{
+    min-width: 25px;
+}
+
+.language_bar_list li a img {
+    border-radius: 10px;
+    margin-right: 0px;
 }
 
 .mainmenu {
@@ -60,7 +93,7 @@ body {
 
 .mainmenu li a{
     color: black;
-    padding-bottom: 55px;
+    padding-bottom: 52px;
     font-weight: 700;
     font-size: 20px;
     letter-spacing: 0.1em
@@ -75,28 +108,12 @@ body {
     border-bottom: 3px solid green;
     text-decoration: none;
 }
-/*
-.topmenu {
-    height: 50px;
-    border: 1px solid gray;
-    display: inline-block;
-    width:100%
-}
 
-.topmenu li {
-    display: inline-block;
-    width: 50px;
-}
-*/
 .mainmenu {
     height: 130px;
     border: 1px solid gray;
     display: inline-block;
     width:100%
-}
-
-.topmenu li {
-    display: inline-block;
 }
 
 .banner {
@@ -111,11 +128,6 @@ body {
     border: 1px solid gray;
 }
 
-.topmenu ul {
-    margin-top: 10px;
-    padding-left: 196px
-}
-
 .home_content {
     width: 1560px;
     margin:auto;
@@ -127,6 +139,7 @@ body {
     line-height: 60px;
     margin-bottom: 50px;
     margin-top: 100px;
+    padding-left: 50px;
 }
 
 .main_title a {
@@ -141,9 +154,29 @@ body {
     display: inline-block;
     margin-right: 36px;
     position: relative;
+    border-radius: 20px
+}
+
+.home_collection li:hover .cate_block { 
+    width: 512px;
+    height: 655px;
+    bottom: -28px;
+    right: -21px
+}
+
+.home_collection li .cate_block {
+    position: absolute;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    border-radius: 20px
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.home_collection li:hover .cate_block a{
+    color: green;
+    background: #FFFFFF;
+    text-decoration: none;
 }
 
 .home_collection .cover_title {
@@ -187,12 +220,6 @@ body {
     text-align: left;
     font-size: 18px;
     color: white;
-}
-
-.home_collection .discover:hover a{
-    color: green;
-    background: #FFFFFF;
-    text-decoration: none;
 }
 
 .home_collection .discover a .fa {

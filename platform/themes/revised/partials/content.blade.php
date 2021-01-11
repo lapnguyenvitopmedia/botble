@@ -9,23 +9,22 @@
                 <div class="main_title">{{ __('Lastest Collections') }} <a><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a> </div>
                 <div class="home_collection">
                     <ul>
-                        
                         @php
                             $cates = get_featured_categories(3);
                             for($i=0; $i<count($cates); $i++) {
                                 $field = \Botble\Blog\Models\Category::find($cates[$i]->id);
                                 $image = get_field($field, 'image');
-                                //echo '<image src="storage/'.$image.'" />';
-                                echo '<li style="background-image: url(storage/'.$image.')">
-                                        <div class="cover_title">
-                                            <span class="title">'.$cates[$i]->name.'</span>
-                                            <div class="discover">
-                                                <a href="'.$cates[$i]->url.'">Discover 
-                                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                                                </a>
-                                                
-                                            </span>
-                                        </div>
+                                echo '<li>
+                                        <div class="cate_block"  style="background-image: url(storage/'.$image.')">
+                                            <div class="cover_title">
+                                                <span class="title">'.$cates[$i]->name.'</span>
+                                                <div class="discover">
+                                                    <a href="'.$cates[$i]->url.'">Discover 
+                                                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </div>    
                                     </li>';
                             }
                         @endphp
