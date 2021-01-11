@@ -187,10 +187,10 @@ if (version_compare(phpversion(), '5.3.0', '<') === true) {
 	{
 		define('ENVIRONMENT', defined('RS_CI_DEV_MODE') && RS_CI_DEV_MODE ? 'development' : 'production');
 	}
-
+	
 	// Sets the Plugin into demo mode
 	define('RS_DEMO', false);
-
+	
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING

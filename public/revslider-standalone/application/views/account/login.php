@@ -44,7 +44,7 @@
 <?php if(RS_DEMO){ ?>
 	<div style="width: 620px;margin: 50px 0px 0px -110px;" class="required_plugins">
 	<div style="margin-bottom: 20px"><img src="http://sharedimages.themepunch.tools/server_req.png" alt="required programs" /></div>
-
+	
 	<a href="http://codecanyon.net/item/slider-revolution-responsive-jquery-plugin/2580848?ref=themepunch&license=regular&open_purchase_for_item_id=2580848&purchasable=source" style="margin-right:10px"><img src="http://sharedimages.themepunch.tools/buy_jqueryslider.png"></a>
 	<a href="http://codecanyon.net/item/slider-revolution-jquery-visual-editor-addon/13934907?ref=themepunch&license=regular&open_purchase_for_item_id=13934907&purchasable=source" style="margin-left:10px"><img src="http://sharedimages.themepunch.tools/buy_visualeditor.png"></a>
 	</div>

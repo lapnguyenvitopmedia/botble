@@ -27,8 +27,8 @@
     <!--[if IE 9]><body class="ie9 lt-ie10"><![endif]-->
     <body>
         <div class="container">
-            <div class="row">
-                <div class="topmenu">
+            <div class="row cover_topmenu">
+                <div class="topmenu col-md-9">
                     {!!
                         Menu::renderMenuLocation('header-menu', [
                             'options' => [],
@@ -36,25 +36,33 @@
                         ])
                     !!}
                 </div>
+                <div class="col-md-3">
+                    <div class="top-right-header">
+                        <div class="header_search">
+                            <i class="fa fa-search"></i>
+                            <input class="input_search" type="text" placeholder="search..." />
+                        </div>
+                        {!! apply_filters('language_switcher') !!}
+                    </div>
+                </div>
             </div>
             <div class="row ">
                 <div class="mainmenu">
-
                     {!!
                         Menu::renderMenuLocation('main-menu', [
                             'options' => [],
                             'theme'   => true
                         ])
                     !!}
-
                 </div>
             </div>
             <div class="row">
-
+                    @php
+                        $page = Theme::get('page');
+                    @endphp
                     @if (url()->current() == route('public.single') || ($page && $page->template === 'homepage'))
                         <div class="banner">
-                            {!! do_shortcode('[banner]showcase-carousel[/banner]') !!}
-
+                            {!! do_shortcode('[banner]slaido_96[/banner]') !!}
                         </div>
                     @else
                         <div class="category_image" style="background-image: url({{ theme_option('home_banner') ? RvMedia::getImageUrl(theme_option('home_banner')) : Theme::asset()->url('images/banner.jpg') }})">

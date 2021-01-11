@@ -84,8 +84,8 @@ class RevSliderPluginUpdate {
             self::set_version($version);
         }
 
-        if(version_compare($version, '5.4.8', '<')){
-            $version = '5.4.8';
+        if(version_compare($version, '5.4.8.1', '<')){
+            $version = '5.4.8.1';
 
             self::upgrade_addons_5481();
             self::set_version($version);
@@ -1088,7 +1088,7 @@ class RevSliderPluginUpdate {
     }
 
 	/**
-	 * Upgrade Before-After, Weather, Whiteboard and Typewriter Add-Ons for compatiblity with 5.4.8
+	 * Upgrade Before-After, Weather, Whiteboard and Typewriter Add-Ons for compatiblity with 5.4.8.1
 	 */
 	public static function upgrade_addons_5481() {
 		$addons = array(
