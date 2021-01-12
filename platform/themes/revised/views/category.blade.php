@@ -1,12 +1,6 @@
 <div>
     <h3>{{ $category->name }}</h3>
     {!! Theme::breadcrumb()->render() !!}
-    @php
-        //dd($category->parent_id);
-        $image = get_field($category, 'image');
-        echo '<image src='.$image.' />';
-    @endphp
-    
 </div>
 <div>
     @if ($posts->count() > 0)

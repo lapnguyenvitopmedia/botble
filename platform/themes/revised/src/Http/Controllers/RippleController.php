@@ -1,6 +1,6 @@
 <?php
 
-namespace Theme\Revised\Http\Controllers;
+namespace Theme\Ripple\Http\Controllers;
 
 use Botble\Base\Http\Responses\BaseHttpResponse;
 use Botble\Blog\Repositories\Interfaces\PostInterface;
@@ -10,11 +10,8 @@ use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Http\Request;
 use Theme;
 
-use Theme\Revised\Models\Post as Post;
-
-class ExampleController extends PublicController
+class RippleController extends PublicController
 {
-    
     /**
      * {@inheritDoc}
      */
@@ -29,7 +26,6 @@ class ExampleController extends PublicController
     public function getView(BaseHttpResponse $response, $key = null)
     {
         return parent::getView($response, $key);
-        
     }
 
     /**

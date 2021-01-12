@@ -28,8 +28,8 @@ Route::group(['namespace' => 'Theme\Revised\Http\Controllers', 'middleware' => [
             'uses' => 'ExampleController@getView',
         ]);
         
-        Route::get('/abc/edf', 'ExampleController@abc')->name('public.abc');
-        Route::get('/abc/getpost', 'ExampleController@getAPost')->name('public.getapost');
+        //Route::get('/abc/edf', 'ExampleController@abc')->name('public.abc');
+        //Route::get('/abc/getpost', 'ExampleController@getAPost')->name('public.getapost');
     });
 
 });

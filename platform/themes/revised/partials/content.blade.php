@@ -4,6 +4,9 @@
 <div class="row">
     <div class="inner-container">{!! Theme::content() !!}</div>
     <div>
+        @php
+            $page = Theme::get('page');
+        @endphp
         @if (url()->current() == route('public.single') || ($page && $page->template === 'homepage'))
             <div class="home_content">
                 <div class="main_title">{{ __('Lastest Collections') }} <a><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a> </div>
