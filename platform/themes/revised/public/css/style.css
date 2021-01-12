@@ -2,6 +2,12 @@
   font-family: Quicksand;
   src: url(../fonts/Quicksand-Medium.ttf);
 }
+
+@font-face {
+  font-family: Playfair;
+  src: url(../fonts/PlayfairDisplay-Regular.ttf);
+}
+
 body {
     font-family: Quicksand
 }
@@ -195,10 +201,11 @@ body {
     height: 436px;
     bottom: 0px;
     text-align: center;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #091728 100%);
 }
 
 .home_collection .title {
-    font-family: Playfair Display;
+    font-family: Playfair;
     font-size: 64px;
     font-style: normal;
     font-weight: 400;
@@ -230,9 +237,11 @@ body {
     border-radius: 5px;
     display: inline-block;
     padding-left: 20px;
-    padding-top: 8px;
+    padding-top: 4px;
     text-align: left;
     font-size: 18px;
+    font-weight: bold;
+    font-family: Playfair;
     color: white;
 }
 
@@ -325,7 +334,7 @@ body .scrollup {
     left: 798px;
     top: 324px;
 
-    font-family: Playfair Display;
+    font-family: Playfair;
     font-style: normal;
     font-weight: normal;
     font-size: 96px;
