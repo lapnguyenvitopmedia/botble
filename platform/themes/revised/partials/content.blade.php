@@ -30,7 +30,7 @@
             </div>
         </div>
     @else
-        <div class="home_content">{!! Theme::content() !!}</div>
+        {!! Theme::content() !!}
     @endif
 </div>
 

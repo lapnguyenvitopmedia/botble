@@ -444,8 +444,9 @@ body .scrollup {
 
 /* category */
 .cate_top{
-    width: 1920px;
     height: 520px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 p.c_name{
     width: 634px;

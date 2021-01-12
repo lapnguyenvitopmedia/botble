@@ -1,16 +1,22 @@
-@if ($category->parent_id==0)
-    <div class="category">
+<div class="category">
     @php
     $image = get_field($category, 'image');
     @endphp
-    <div class="cate_top" style="background-image: url('{{ RvMedia::getImageUrl($image, null, false, RvMedia::getDefaultImage()) }}');">
-        <div class="banner-title">
-            <p class="c_name">{{ $category->name }}</p>
-            <p class="c_desc">{{ $category->description }}</p>
-        </div>
+    <div class="cate_top container-fluid"
+        style="background-image: url('{{ RvMedia::getImageUrl($image, null, false, RvMedia::getDefaultImage()) }}');">
+        <p class="c_name">{{ $category->name }}</p>
+        <p class="c_desc">{{ $category->description }}</p>
     </div>
 
-    
+    @if ($category->parent_id==0)
+    <div class="cate_slide container-fluid">
+        Slide
+    </div>
+    @else
+    <div class="product_highlight container">
+        Product Hightlights
+    </div>
+    @endif
 
     <div class="cate_info container">
             <div class="cinfo_img">
@@ -60,7 +66,3 @@
         Recommend
     </div>
 </div>
-
-@else
-
-@endif
