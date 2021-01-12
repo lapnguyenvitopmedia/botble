@@ -11,6 +11,7 @@ use Botble\Base\Supports\Helper;
 use Event;
 use Botble\Base\Traits\LoadAndPublishDataTrait;
 use Illuminate\Routing\Events\RouteMatched;
+use Theme;
 
 class ConceptServiceProvider extends ServiceProvider
 {
@@ -51,7 +52,7 @@ class ConceptServiceProvider extends ServiceProvider
             ]);
         });
         add_shortcode('concept', 'concept', 'Nhập tên concept', function($value) {
-            return view('plugins/concepts::shortcode-concept');
+            return view('plugins/concept::shortcode-concept')->render();
         });
         // shortcode()->setAdminConfig('concept', view('plugins/concepts::partials.concept-admin-config')->render());
     }

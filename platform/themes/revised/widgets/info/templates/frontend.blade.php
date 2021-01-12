@@ -1,4 +1,4 @@
-<div class="col-md-4 col">
+<div class="col-md-3 col">
 <div class="aside-box">
     <div class="aside-box-header">
         <h3>{{ $config['name'] }}</h3>

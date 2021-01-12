@@ -3,7 +3,7 @@
     <div class="footer">
         <div class="footer_info">
             <div class="row">
-                <div class="col-md-3 footer_social col">
+                <div class="col-md-4 footer_social col">
                     <div class="widget">
                         @if (theme_option('logo_footer') || theme_option('logo'))
                             <div class="footer_logo">
@@ -14,21 +14,12 @@
                         @endif
                         <p>{{ theme_option('about-us') }}</p>
                     </div>
-                    <div class="widget">
-                        <ul class="social_icons social_white">
-                            @if (theme_option('facebook'))
-                                <li><a href="{{ theme_option('facebook') }}" class="sc_facebook" target="_blank"><i class="ion-social-facebook"></i></a></li>
-                            @endif
-                            @if (theme_option('twitter'))
-                                <li><a href="{{ theme_option('twitter') }}" class="sc_twitter" target="_blank"><i class="ion-social-twitter"></i></a></li>
-                            @endif
-                            @if (theme_option('youtube'))
-                                <li><a href="{{ theme_option('youtube') }}" class="sc_youtube" target="_blank"><i class="ion-social-youtube-outline"></i></a></li>
-                            @endif
-                            @if (theme_option('instagram'))
-                                <li><a href="{{ theme_option('instagram') }}" class="sc_instagram" target="_blank"><i class="ion-social-instagram-outline"></i></a></li>
-                            @endif
-                        </ul>
+                    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+                    <div class="social-links">
+                        <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
+                        <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
+                        <a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
+                        <a href="#"><i class="fa fa-youtube-play fa-lg"></i></a>
                     </div>
                 </div>
 
