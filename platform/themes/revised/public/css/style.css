@@ -202,6 +202,7 @@ body {
     bottom: 0px;
     text-align: center;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #091728 100%);
+    border-radius: 20px
 }
 
 .home_collection .title {
@@ -212,12 +213,17 @@ body {
     line-height: 64px;
     letter-spacing: 0em;
     text-align: center;
-    display: inline;
-    width: 100px;
+    display: inline-block;
+    /*width: 200px;*/
+    color: white;
 }
 
 .home_collection li:hover .discover {
     bottom: 48px;
+}
+
+.home_collection li:hover .cover_title {
+    height: 464px;
 }
 
 .home_collection .discover {
@@ -237,7 +243,7 @@ body {
     border-radius: 5px;
     display: inline-block;
     padding-left: 20px;
-    padding-top: 4px;
+    padding-top: 8px;
     text-align: left;
     font-size: 18px;
     font-weight: bold;
@@ -401,7 +407,7 @@ body .scrollup {
     padding-left: 195px;
   }
 
-  p{
+ .footer p {
     font-family: Quicksand;
     font-style: normal;
     font-weight: normal;
@@ -410,7 +416,7 @@ body .scrollup {
     /* or 175% */
     color: #666666;
   }
-  a{
+  .footer a {
     font-family: Quicksand;
     font-style: normal;
     font-weight: normal;
@@ -419,20 +425,18 @@ body .scrollup {
     /* or 175% */
     color: #666666;
   }
-  .footer_logo
+  
+.footer_logo
   {
     padding-left: 50px;
   }
-h3
+.footer h3
 {
     font-family: Quicksand;
-font-style: normal;
-font-weight: bold;
-font-size: 20px;
-line-height: 25px;
-/* identical to box height */
-
-text-transform: uppercase;
-
-color: #118A20;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #118A20;
 }
