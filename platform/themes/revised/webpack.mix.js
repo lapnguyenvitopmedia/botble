@@ -36,7 +36,5 @@ mix
             })
         ]
     )
-    .js(source + '/assets/js/ripple.js', dist + '/js')
-
     .copyDirectory(dist + '/css', source + '/public/css')
     .copyDirectory(dist + '/js', source + '/public/js');
