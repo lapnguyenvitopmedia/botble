@@ -85,10 +85,29 @@ theme_option()->setField([
             ],
         ],
     ])
+    ->setField([
+        'id'         => 'logo_footer',
+        'section_id' => 'opt-text-subsection-logo',
+        'type'       => 'mediaImage',
+        'label'      => __('Logo in Footer'),
+        'attributes' => [
+            'name'  => 'logo_footer',
+            'value' => null,
+        ],
+    ])
 ;
+add_action('init', function () {
+    config(['filesystems.disks.public.root' => public_path('storage')]);
+}, 124);
+
+RvMedia::addSize('featured', 825, 550)
+    ->addSize('medium', 540, 600)
+    ->addSize('small', 540, 300)
+    ->addSize('banner', 250, 355);
 
 add_shortcode('a-shortcode', 'A short code', 'A short code', function ($shortCode) {
     //return 'content of shortcode is here';
     //return \Botble\Career\Repositories\Eloquent\CareerRepository::getlist();
+
     return get_list_career();
 });

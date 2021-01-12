@@ -77,43 +77,4 @@
             </nav>
         </div>
     </header>
-    <header data-sticky="false" data-sticky-checkpoint="200" data-responsive="991" class="page-header page-header--light">
-        <div class="container">
-            <!-- LOGO-->
-            <div class="page-header__left">
-                <a href="{{ route('public.single') }}" class="page-logo">
-                    @if (theme_option('logo'))
-                        <img src="{{ RvMedia::getImageUrl(theme_option('logo')) }}" alt="{{ theme_option('site_title') }}">
-                    @endif
-                </a>
-            </div>
-            <div class="page-header__right">
-                <!-- MOBILE MENU-->
-                <div class="navigation-toggle navigation-toggle--dark" style="display: none"><span></span></div>
-                <div class="pull-left">
-                    <!-- SEARCH-->
-                    <div class="search-btn c-search-toggler"><i class="fa fa-search close-search"></i></div>
-                    <!-- NAVIGATION-->
-                    <nav class="navigation navigation--light navigation--fade navigation--fadeLeft">
-                        {!!
-                            Menu::renderMenuLocation('main-menu', [
-                                'options' => ['class' => 'menu sub-menu--slideLeft'],
-                                'view'    => 'main-menu',
-                            ])
-                        !!}
-                    </nav>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-        @if (is_plugin_active('blog'))
-            <div class="super-search hide">
-                <form class="quick-search" action="{{ route('public.search') }}">
-                    <input type="text" name="q" placeholder="{{ __('Type to search...') }}" class="form-control search-input" autocomplete="off">
-                    <span class="close-search">&times;</span>
-                </form>
-                <div class="search-result"></div>
-            </div>
-        @endif
-    </header>
-    <div id="page-wrap">
+

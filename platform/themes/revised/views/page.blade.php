@@ -1,3 +1,6 @@
+@php
+Theme::set('page', $page);
+@endphp
 @if ($page->id != theme_option('homepage_id', setting('show_on_front')))
     @php Theme::set('section-name', $page->name) @endphp
     <article class="post post--single">

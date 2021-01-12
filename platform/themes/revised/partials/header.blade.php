@@ -65,11 +65,12 @@
                             {!! do_shortcode('[banner]slaido_96[/banner]') !!}
                         </div>
                     @else
-                        <div class="category_image" style="background-image: url({{ theme_option('home_banner') ? RvMedia::getImageUrl(theme_option('home_banner')) : Theme::asset()->url('images/banner.jpg') }})">
-
+                        <div class="category_image" style="background-image: url({{ theme_option('home_banner') ? RvMedia::getImageUrl(theme_option('home_banner')) : Theme::asset()->url('images/page-intro-02.jpg') }})">
+                            
                         </div>
                         <div class="slider product">
 
                         </div>
                     @endif
             </div>
+
