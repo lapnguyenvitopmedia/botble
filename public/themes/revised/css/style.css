@@ -139,7 +139,7 @@ body {
     /* border: 1px solid gray; */
 }
 
-.home_content {
+.home_content, .main_content {
     width: 1560px;
     margin:auto;
 }
@@ -444,14 +444,16 @@ body .scrollup {
 
 /* category */
 .cate_top{
-    width: 1920px;
     height: 520px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
-p.c_name{
-    width: 634px;
-    height: 128px;
-    /* left: 643px; */
-    /* top: 324px; */
+
+.banner-title {
+    padding-top: 150px;
+}
+
+.banner-title .c_name {
     font-family: Playfair Display;
     font-style: normal;
     font-weight: normal;
@@ -462,11 +464,10 @@ p.c_name{
     color: #FFFFFF;
     text-shadow: 2px 4px 20px rgba(0, 0, 0, 0.5);
 }
-p.c_desc{
+
+.banner-title .c_desc {
     width: 747px;
-    height: 60px;
-    /* left: 586px; */
-    /* top: 468px; */
+    margin: auto;
     font-family: Quicksand;
     font-style: normal;
     font-weight: normal;
@@ -483,19 +484,49 @@ p.c_desc{
     height: 332px;
 }
 
-.cate_info{
-    border: 1px solid;
-    width: 1527px;
-    height: 438px;
-    /* height: 210px; */
+.cate_info {
+   margin-top: 150px;
+   margin-bottom: 120px;
 }
+
+.cate_info .main_content {
+    background-image: url(/storage/logo-sinnika-1.png);
+    background-repeat: no-repeat;
+}
+    
+.cate_info .cinfo {
+    padding-left: 370px;
+}
+
+.cate_info .cinfo_desc{
+    width: 770px;
+    height: 120px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.cover_download_btn {
+    text-align: right
+}
+
+.cate_info .btn-download {
+    color: green;
+    font-size: 18px;
+    font-family: Playfair;
+    margin-top: 74px;
+    padding: 20px 50px 20px 50px;
+    border: 1px solid green;
+}
+
 .cinfo_img{
     border: 1px solid;
     width: 327px;
 }
 .cinfo{
-    border: 1px solid;
-    width: 872px;
+    padding-left: 370px
 }
 .cinfo_name{
     width: 351px;
@@ -511,18 +542,7 @@ p.c_desc{
     text-transform: uppercase;
     color: #000000;
 }
-.cinfo_desc{
-    width: 765px;
-    height: 120px;
-    /* left: 568px;
-    top: 1281px; */
-    font-family: Quicksand;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 30px;
-    color: #000000;
-}
+
 .cinfo_btn{
     height: 68px;
     width: 328px;
@@ -538,13 +558,89 @@ p.c_desc{
     border: 1px solid;
     width: 1527px;
 }
-
-.subcate_item{
+.subcate .subcate_row {
+    margin-bottom: 60px;
+}
+.subcate_item {
     width: 470px;
     height: 600px;
-    /* left: 195px;
-    top: 1514px; */
     background: #FFFFFF;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    text-align: center;
+    position: relative;
+}
+
+.subcate .subcate_name {
+    position: absolute;
+    z-index: 1;
+    bottom: 110px;
+    font-family: Playfair;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: center;
+    width: 100%;
+}
+
+.subcate .subcate_desc {
+    position: absolute;
+    z-index: 2;
+    height: 324px;
+    bottom: 0px;
+    color: white;
+    background-color: #118A20;
+    display: none;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: Quicksand;
+}
+
+.subcate .subcate_desc p{
+    font-family: Playfair;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: center;
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.subcate .subcate_item:hover .subcate_desc{
+    display: block;
+}
+
+.subcate .subcate_item:hover .subcate_btn {
+    background-color: white;
+    color: #118A20
+}
+
+.subcate .cover_subcate_btn {
+    position: absolute;
+    z-index: 3;
+    bottom: 25px;
+    width: 100%;
+    text-align: center;
+}
+.subcate .subcate_btn {
+    font-family: Playfair;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+
 }
