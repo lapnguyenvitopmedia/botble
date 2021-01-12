@@ -1,5 +1,5 @@
 
-<div class="col-md-3 col">
+<div class="col-md-2 col">
 <div class="aside-box footer_search">
     <div class="aside-box-header">
         <h3>{{ $config['name'] }}</h3>
