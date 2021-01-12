@@ -2,18 +2,19 @@
     @php
     $image = get_field($category, 'image');
     @endphp
-    <div class="cate_top container-fluid"
-        style="background-image: url('{{ RvMedia::getImageUrl($image, null, false, RvMedia::getDefaultImage()) }}');">
-        <p class="c_name">{{ $category->name }}</p>
-        <p class="c_desc">{{ $category->description }}</p>
+    <div class="cate_top" style="background-image: url('{{ RvMedia::getImageUrl($image, null, false, RvMedia::getDefaultImage()) }}');">
+        <div class="banner-title">
+            <p class="c_name">{{ $category->name }}</p>
+            <p class="c_desc">{{ $category->description }}</p>
+        </div>
     </div>
 
     @if ($category->parent_id==0)
-    <div class="cate_slide container-fluid">
+    <div class="cate_slide">
         Slide
     </div>
     @else
-    <div class="product_highlight container">
+    <div class="product_highlight ">
         Product Hightlights
     </div>
     @endif
