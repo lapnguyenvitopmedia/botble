@@ -1,5 +1,4 @@
-@if ($category->parent_id==0)
-    <div class="category">
+<div class="category">
     @php
     $image = get_field($category, 'image');
     @endphp
@@ -10,7 +9,15 @@
         </div>
     </div>
 
-    
+    @if ($category->parent_id==0)
+    <div class="cate_slide">
+        Slide
+    </div>
+    @else
+    <div class="product_highlight ">
+        Product Hightlights
+    </div>
+    @endif
 
     <div class="cate_info container">
             <div class="cinfo_img">
@@ -60,7 +67,3 @@
         Recommend
     </div>
 </div>
-
-@else
-
-@endif
