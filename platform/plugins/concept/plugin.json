@@ -1,9 +1,0 @@
-{
-    "name": "Concept",
-    "namespace": "Botble\\Concept\\",
-    "provider": "Botble\\Concept\\Providers\\ConceptServiceProvider",
-    "author": "N/A",
-    "url": "N/A",
-    "version": "1.0",
-    "description": "The description for module concept"
-}

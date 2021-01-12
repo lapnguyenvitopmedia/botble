@@ -1,8 +1,9 @@
-<div class="row">
+
     @php
         $page = Theme::get('page');
     @endphp
     @if (url()->current() == route('public.single') || ($page && $page->template === 'homepage'))
+        <div class="row">
         <div class="home_content">
             <div class="main_title">{{ __('Lastest Collections') }} <a><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a> </div>
             <div class="home_collection">
@@ -29,8 +30,9 @@
                 </ul>
             </div>
         </div>
+            </div>
     @else
         {!! Theme::content() !!}
     @endif
-</div>
+
 
