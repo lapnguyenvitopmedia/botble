@@ -165,16 +165,21 @@ body {
     height: 600px;
     width: 470px;
     display: inline-block;
-    margin-right: 36px;
+    margin-right: 40px;
     position: relative;
     border-radius: 20px
+}
+
+.home_collection li:last-child {
+    margin-right: 0px;
 }
 
 .home_collection li:hover .cate_block {
     width: 512px;
     height: 655px;
     bottom: -28px;
-    right: -21px
+    right: -21px;
+    transition: width 0.3s, height 0.3s, bottom 0.3s, right 0.3s;
 }
 
 .home_collection li .cate_block {
@@ -254,7 +259,7 @@ body {
 }
 
 /* scroll */
-html {
+/* html {
     scroll-behavior: smooth;
 }
 body .scrollup {
@@ -281,7 +286,7 @@ body .scrollup {
 
 .scrollup:focus {
     color: #fff
-}
+} */
 /* scroll */
 
 /* start collection */
