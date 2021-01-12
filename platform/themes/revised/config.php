@@ -48,7 +48,8 @@ return [
                 ->container('footer')
                 ->usePath()->add('jquery', 'plugins/jquery/jquery.min.js')
                 ->usePath()->add('bootstrap-js', 'plugins/bootstrap/js/bootstrap.min.js', ['jquery'])
-                ->usePath()->add('custom.js', 'js/custom.js', ['jquery'], [], '5.10');
+                ->usePath()->add('custom.js', 'js/custom.js', ['jquery'], [], '5.10')
+                ->usePath()->add('flickity.pkgd.js', 'js/flickity.pkgd.min.js', ['jquery'], [], '5.10');
 
             $theme
                 ->asset()
@@ -56,7 +57,8 @@ return [
                 ->usePath()->add('bootstrap-css', 'plugins/bootstrap/css/bootstrap.min.css')
                 ->usePath()->add('font-awesome', 'plugins/font-awesome/css/font-awesome.min.css')
                 ->usePath()->add('ionicons', 'plugins/ionicons/css/ionicons.min.css')
-                ->usePath()->add('style', 'css/style.css', [], [], '5.10');
+                ->usePath()->add('style', 'css/style.css', [], [], '5.10')
+                ->usePath()->add('flickity', 'css/flickity.css', [], [], '5.10');
 
             if (function_exists('shortcode')) {
                 $theme->composer(['page', 'post', 'index'], function (\Botble\Shortcode\View\View $view) {

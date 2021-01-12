@@ -95,6 +95,18 @@ theme_option()->setField([
             'value' => null,
         ],
     ])
+    ->setField([
+        'id'         => 'number_of_featured_cities',
+        'type'       => 'number',
+        'label'      => 'Number of featured cities on homepage',
+        'attributes' => [
+            'name'    => 'number_of_featured_cities',
+            'value'   => 10,
+            'options' => [
+                'class' => 'form-control',
+            ],
+        ],
+    ])
 ;
 add_action('init', function () {
     config(['filesystems.disks.public.root' => public_path('storage')]);
