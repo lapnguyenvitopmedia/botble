@@ -143,7 +143,7 @@ body {
     line-height: 60px;
     margin-bottom: 50px;
     margin-top: 100px;
-    padding-left: 50px;
+    padding-left: 70px;
 }
 
 .main_title a {
@@ -206,6 +206,10 @@ body {
     text-align: center;
     display: inline;
     width: 100px;
+}
+
+.home_collection li:hover .discover {
+    bottom: 48px;
 }
 
 .home_collection .discover {

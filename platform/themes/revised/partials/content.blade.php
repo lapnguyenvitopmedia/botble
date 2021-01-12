@@ -20,7 +20,6 @@
                                                 <a href="'.$cates[$i]->url.'">Discover
                                                     <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
                                                 </a>
-
                                             </span>
                                         </div>
                                       </div>
