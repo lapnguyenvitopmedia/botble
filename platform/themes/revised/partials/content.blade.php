@@ -1,7 +1,4 @@
 <div class="row">
-    <div class="home_content">{!! Theme::content() !!}</div>
-</div>
-<div class="row">
     @php
         $page = Theme::get('page');
     @endphp
@@ -33,6 +30,8 @@
                 </ul>
             </div>
         </div>
+    @else
+        <div class="home_content">{!! Theme::content() !!}</div>
     @endif
 </div>
 
