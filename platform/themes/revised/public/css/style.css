@@ -561,10 +561,10 @@ body { font-family: sans-serif; }
 }
 
 .carousel-cell {
-  width: 28%;
-  height: 200px;
+  width: 15%;
+  height: 300px;
   margin-right: 10px;
-  background: #8C8;
+  /* background: #8C8; */
   border-radius: 5px;
   counter-increment: carousel-cell;
 }
@@ -581,4 +581,11 @@ body { font-family: sans-serif; }
   line-height: 200px;
   font-size: 80px;
   color: white;
+}
+.carousel-cell-image
+{
+    width: 280px;
+height: 300px;
+background: #FFFFFF;
+border-radius: 20px;
 }

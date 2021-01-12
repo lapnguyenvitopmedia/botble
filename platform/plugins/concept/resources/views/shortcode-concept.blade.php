@@ -17,6 +17,7 @@
 
         <div class="padtop70">
             <div class="areahome">
+            
                 <div class="row">
                     <div class="col-12">
                         <h2>{{ __('Properties by locations') }}</h2>
@@ -42,16 +43,3 @@
         </div>
     </div>
 @endif
-
-<h1>Flickity - lazyLoad</h1>
-
-<div class="carousel" data-flickity='{ "groupCells": 1 }'>
-  <div class="carousel-cell">
-    <img class="carousel-cell-image"
-      data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/van.jpg" alt="van" />
-  </div>
-    <div class="carousel-cell">
-    <img class="carousel-cell-image"
-      data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/van.jpg" alt="van" />
-  </div>
-</div>

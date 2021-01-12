@@ -49,7 +49,7 @@ return [
                 ->usePath()->add('jquery', 'plugins/jquery/jquery.min.js')
                 ->usePath()->add('bootstrap-js', 'plugins/bootstrap/js/bootstrap.min.js', ['jquery'])
                 ->usePath()->add('custom.js', 'js/custom.js', ['jquery'], [], '5.10')
-                ->usePath()->add('flickity.pkgd.js', 'js/flickity.pkgd.min.js', ['jquery'], [], '5.10');
+                ->usePath()->add('flickity.pkgd.js', 'js/flickity.pkgd.js', ['jquery'], [], '5.10');
 
             $theme
                 ->asset()

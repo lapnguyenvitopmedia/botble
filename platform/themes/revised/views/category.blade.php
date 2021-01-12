@@ -9,9 +9,21 @@
             <p class="c_desc">{{ $category->description }}</p>
         </div>
     </div>
-
-    
-
+{{-- start slider --}}
+<br>
+    <div class="row cate_slder">
+        <div class="carousel" data-flickity='{ "groupCells": 1 }'>
+         @foreach ($category->children()->get() as $child_category)
+            <div class="carousel-cell">
+                <img class="carousel-cell-image"
+                    src="{{ RvMedia::getImageUrl(get_field($child_category, 'image'), null, false, RvMedia::getDefaultImage()) }}"
+                    alt="{{ $child_category->name }}">
+            </div>
+            @endforeach
+        </div>
+    </div>
+    <br>
+{{-- end silder --}}
     <div class="cate_info container">
             <div class="cinfo_img">
                 <img src="https://via.placeholder.com/327x210" alt="">
@@ -62,5 +74,9 @@
 </div>
 
 @else
+
+
+
+
 
 @endif
