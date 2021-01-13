@@ -694,6 +694,10 @@ border-radius: 20px;
     height: 310px;
 box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.5);
 }
+/* .carousel-cell-image:hover .btn_discovery a
+{
+    display:block;
+} */
 .centered {
     width: 200px;
     /* position: absolute; */
