@@ -747,3 +747,93 @@ body .scrollup {
 }
 /* Child Category */
 
+/* flickity scroll slider */
+/* external css: flickity.css */
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.carousel {
+  /* background: #EEE; */
+  width:1920px;
+  margin-left:15px;
+}
+
+.carousel-cell {
+  width: 5%;
+  height: 350px;
+  margin-right: 10px;
+  /* background: #8C8; */
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+
+}
+
+.carousel-cell.is-selected {
+  /* background: #ED2; */
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  /* content: counter(carousel-cell); */
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+.carousel-cell-image
+{
+    width: 280px;
+height: 300px;
+background: #FFFFFF;
+border-radius: 20px;
+
+}
+.carousel-cell-image:hover
+{
+   width:290px;
+    height: 310px;
+box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.5);
+}
+/* .carousel-cell-image:hover .btn_discovery a
+{
+    display:block;
+} */
+.centered {
+    width: 200px;
+    /* position: absolute; */
+    top: 50%;
+    /* left: 50%; */
+    transform: translate(-30%, -150%);
+    color: #ffffff;
+    text-align:center;
+    margin-left: -120px;
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    /* identical to box height */
+    text-transform: capitalize;
+
+}
+.btn_discovery a
+{
+    width: 169px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-top: 200px;
+    margin-left: -50px;
+    /* display:none; */
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: capitalize;
+    color: #118A20;
+}

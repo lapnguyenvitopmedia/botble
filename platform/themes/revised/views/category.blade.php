@@ -11,6 +11,30 @@
     </div>
 </div>
 @if ($category->parent_id==0)
+{{-- start slider --}}
+<br>
+    <div class="row cate_slder">
+        <div class="carousel" data-flickity='{ "groupCells": 1,"wrapAround": true}'>
+         @foreach ($category->children()->get() as $child_category)
+         <div class="centered">{{ $child_category->name }}</div>
+            <div class="carousel-cell">
+                <img class="carousel-cell-image"
+                    src="{{ RvMedia::getImageUrl(get_field($child_category, 'image'), null, false, RvMedia::getDefaultImage()) }}"
+                    alt="{{ $child_category->name }}">
+
+            </div>
+                    <div class="btn_discovery">
+                        <a href="{{ $child_category->url }}" class="btn btn-default subcate_btn discover">
+                            View All
+                        </a>
+                    </div>
+
+            @endforeach
+        </div>
+    </div>
+    <br>
+{{-- end silder --}}
+
 <div class="row cate_info">
     <div class="row main_content">
         <div class="cinfo col-md-9">
@@ -120,6 +144,10 @@
         @endforeach
     </div>
 </div>
+
+
+
+
 
 @endif
 
