@@ -141,18 +141,18 @@
         <div class="row subcate_row">
             @foreach ($chunk as $post)
             <div class="col-md-6">
-                <div class="subcate_item"
+                <div class="subcate_item_big"
                     style="background-image:url({{ RvMedia::getImageUrl($post->image, null, false, RvMedia::getDefaultImage()) }})">
                     <div class="subcate_name">
                         <div class="row">
-                            <div class="col-sm-9">
-                                <p class="">{{ $post->name }}</p>
-                                <p class="">{{ $post->description }}</p>
+                            <div class="col-sm-9 div_bigger">
+                                <p class="tile_big">{{ $post->name }}</p>
+                                <p class="text_big">{{ $post->description }}</p>
                             </div>
-                            <div class="col-sm-3">
-                                <img class="" src="{{ RvMedia::getImageUrl(get_field($post, 'post_logo'), null, false, RvMedia::getDefaultImage()) }}" alt="{{ $post->name }}">
+                            <div class="col-sm-3 div_big">
+                                <img class="img_big" src="{{ RvMedia::getImageUrl(get_field($post, 'post_logo'), null, false, RvMedia::getDefaultImage()) }}" alt="{{ $post->name }}">
                                 @if (get_field($post, 'is_repreve')==1)
-                                    <p class="">Repreve</p>
+                                    <p class="p_big">Repreve</p>
                                 @endif
                                 <div class="cover_subcate_btn">
                                     <a href="{{ $post->url }}" class="btn btn-default subcate_btn">
