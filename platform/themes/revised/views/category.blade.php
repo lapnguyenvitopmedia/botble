@@ -106,13 +106,14 @@
         <div class=" col-md-3 chcover_download_btn">
             <a class="btn btn-default btn-download" href="#">
                 <span>Request A Sample</span>
-                <i class="ion ion-ios-pricetags-outline" aria-hidden="true"></i>
+                <img class="" src="{{ RvMedia::getImageUrl('/frame.png', null, false, null) }}" alt="">
+                {{-- <i class="ion ion-ios-pricetags-outline" aria-hidden="true"></i> --}}
             </a>
         </div>
     </div>
 </div>
 
-{{-- product --}}
+{{-- posts --}}
 <div class="row">
     <div class="subcate main_content">
         {{-- @php
@@ -125,24 +126,41 @@
                 <div class="subcate_item"
                     style="background-image:url({{ RvMedia::getImageUrl($post->image, null, false, RvMedia::getDefaultImage()) }})">
                     <div class="subcate_name">
-                        <p>{{ $post->name }}</p>
-                        <p>{{ $post->description }}</p>
+                        <div class="row">
+                            <div class="col-sm-9">
+                                <p class="">{{ $post->name }}</p>
+                                <p class="">{{ $post->description }}</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <img class="" src="{{ RvMedia::getImageUrl(get_field($post, 'post_logo'), null, false, RvMedia::getDefaultImage()) }}" alt="{{ $post->name }}">
+                                @if (get_field($post, 'is_repreve')==1)
+                                    <p class="">Repreve</p>
+                                @endif
+                                <div class="cover_subcate_btn">
+                                    <a href="{{ $post->url }}" class="btn btn-default subcate_btn">
+                                        <i class="ion ion-ios-arrow-thin-right" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>>
                     <div class="subcate_desc">
                         <p> {{ $post->name }} </p>
                         {{ $post->description }}
                     </div>
-                    <div class="cover_subcate_btn">
-                        <a href="{{ $post->url }}" class="btn btn-default subcate_btn">
-                            <i class="ion ion-ios-arrow-thin-right" aria-hidden="true"></i>
-                        </a>
-                    </div>
+
                 </div>
             </div>
             @endforeach
         </div>
         @endforeach
+        <a href="#" class="btn btn-default subcate_btn">
+            Load more
+            <i class="ion ion-ios-arrow-thin-down" aria-hidden="true"></i>
+        </a>
     </div>
+
 </div>
 
 
