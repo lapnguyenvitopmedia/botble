@@ -499,7 +499,7 @@ body .scrollup {
     background-image: url(/storage/logo-sinnika-1.png);
     background-repeat: no-repeat;
 }
-    
+
 .cate_info .cinfo {
     padding-left: 370px;
 }
@@ -525,6 +525,7 @@ body .scrollup {
     margin-top: 74px;
     padding: 20px 50px 20px 50px;
     border: 1px solid green;
+    font-weight: bold;
 }
 
 .cinfo_img{
@@ -634,6 +635,9 @@ body .scrollup {
 
 .subcate .subcate_item:hover .subcate_desc {
     opacity: 1;
+    display: block;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .subcate .subcate_item:hover .subcate_btn {
@@ -720,16 +724,109 @@ body .scrollup {
 .relative_cate .cate_block .discover a i {
     margin-left: 35px
 }
-/* flickity scroll slider */
-/* external css: flickity.css */
-* { box-sizing: border-box; }
 
-body { font-family: sans-serif; }
+/* Child Category */
+.highlight_title{
+    width: 522px;
+    height: 60px;
+    /* left: 699px;
+    top: 736px; */
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 60px;
+    /* identical to box height */
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.highlight_item {
+    /* width: 490px; */
+    height: 260px;
+    /* left: 715px;
+    top: 820px; */
+}
+
+.h_name{
+    width: 220px;
+    height: 32px;
+    left: 330px;
+    top: 934px;
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+    /* identical to box height */
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.chcate_info {
+    margin-top: 150px;
+    margin-bottom: 120px;
+ }
+.chcate_info .chmain_content {
+    /* background-image: url(/storage/logo-sinnika-1.png); */
+    background-repeat: no-repeat;
+}
+.chcate_info .chcinfo_desc{
+    width: 1125px;
+    height: 90px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;
+    color: #000000;
+    /* padding-right: 72px; */
+}
+.chcover_download_btn {
+    padding-right: 197px;
+}
+.chcate_info .btn-download {
+    color: green;
+    font-size: 18px;
+    font-family: Playfair;
+    margin-top: 74px;
+    padding: 10px 57px;
+    border: 1px solid green;
+    font-weight: bold;
+    height: 68px;
+    width: 328px;
+    display:table;
+}
+.btn-download span{
+    display:table-cell;
+    vertical-align:middle;
+}
+.btn-download i{
+    padding-left: 13px;
+    font-size: 40px;
+}
+.chcinfo{
+    padding-left: 198px;
+}
+.chcinfo_name{
+    width: 351px;
+    height: 60px;
+    /* left: 568px;
+    top: 1203px; */
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 60px;
+    /* identical to box height */
+    text-transform: uppercase;
+    color: #000000;
+}
+/* Child Category */
 
 .carousel {
   /* background: #EEE; */
-  width:1920px;
-  margin-left:15px;
+  margin-top: 55px;
 }
 
 .carousel-cell {
@@ -744,7 +841,6 @@ body { font-family: sans-serif; }
   display: flex;
   justify-content: center;
   align-items: center;
-   
 }
 
 .carousel-cell.is-selected {
