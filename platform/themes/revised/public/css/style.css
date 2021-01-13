@@ -1,6 +1,6 @@
 @font-face {
   font-family: Quicksand;
-  src: url(../fonts/Quicksand-Medium.ttf);
+  src: url(../fonts/Quicksand-Bold.ttf);
 }
 
 @font-face {
@@ -14,6 +14,10 @@ body {
 
 .container {
     width: 1920px
+}
+
+.pos_relative {
+    position: relative
 }
 
 .cover_topmenu {
@@ -110,15 +114,15 @@ body {
     padding-right: 75px;
 }
 
-.mainmenu li a{
+.mainmenu li a {
     color: black;
     padding-bottom: 52px;
-    font-weight: 700;
-    font-size: 20px;
+    font-weight: bolder;
+    font-size: 25px;
     letter-spacing: 0.1em
 }
 
-.mainmenu li a:hover span{
+.mainmenu li a:hover span {
     border-bottom: none;
 }
 
@@ -138,6 +142,9 @@ body {
     width:100%;
     /* border: 1px solid gray; */
 }
+.footer_info .list {
+    list-style: none
+}
 
 .home_content, .main_content {
     width: 1560px;
@@ -146,7 +153,7 @@ body {
 
 .main_title {
     font-size: 48px;
-    font-weight: 700;
+    font-weight: bolder;
     line-height: 60px;
     margin-bottom: 50px;
     margin-top: 100px;
@@ -528,24 +535,22 @@ body .scrollup {
     font-weight: bold;
 }
 
-.cinfo_img{
+.cinfo_img {
     border: 1px solid;
     width: 327px;
 }
-.cinfo{
+
+.cinfo {
     padding-left: 370px
 }
+
 .cinfo_name{
-    width: 351px;
     height: 60px;
-    /* left: 568px;
-    top: 1203px; */
     font-family: Quicksand;
     font-style: normal;
     font-weight: bold;
     font-size: 48px;
     line-height: 60px;
-    /* identical to box height */
     text-transform: uppercase;
     color: #000000;
 }
@@ -797,13 +802,13 @@ body .scrollup {
     width: 328px;
     display:table;
 }
-.btn-download span{
+.btn-download span {
     display:table-cell;
     vertical-align:middle;
 }
+
 .btn-download i{
     padding-left: 13px;
-    font-size: 40px;
 }
 .chcinfo{
     padding-left: 198px;
@@ -915,4 +920,14 @@ body .scrollup {
 .carousel-cell .btn_discovery a i {
     margin-left: 30px;
     margin-right: 20px
+}
+
+.btn_scrollup {
+    right: 0px;
+    top: -160px;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background-image: url(/storage/btn-scrollup.jpg);
+    background-repeat: no-repeat;
 }

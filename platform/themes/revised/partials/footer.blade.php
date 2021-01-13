@@ -1,6 +1,10 @@
 <div class="row">
-
     <div class="footer">
+        <div class="main_content pos_relative">
+            <span class="btn_scrollup">
+                
+            </span>
+        </div>
         <div class="footer_info">
             <div class="row">
                 <div class="col-md-4 footer_social col">
