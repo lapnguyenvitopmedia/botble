@@ -107,6 +107,22 @@ theme_option()->setField([
             ],
         ],
     ])
+    ->setField([
+        'id'         => 'copyright',
+        'section_id' => 'opt-text-subsection-general',
+        'type'       => 'text',
+        'label'      => __('Copyright'),
+        'attributes' => [
+            'name'    => 'copyright',
+            'value'   => null,
+            'options' => [
+                'class'        => 'form-control',
+                'placeholder'  => __('Change copyright'),
+                'data-counter' => 255,
+            ],
+        ],
+        'helper'     => __('Copyright on footer of site'),
+    ])
 ;
 add_action('init', function () {
     config(['filesystems.disks.public.root' => public_path('storage')]);
