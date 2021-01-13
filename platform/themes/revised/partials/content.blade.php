@@ -5,7 +5,7 @@
     @if (url()->current() == route('public.single') || ($page && $page->template === 'homepage'))
         <div class="row">
         <div class="home_content">
-            <div class="main_title">{{ __('Lastest Collections') }} <a><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a> </div>
+            <div class="main_title">{{ __('Lastest Collections') }} <a><i class="ion ion-ios-arrow-thin-right" aria-hidden="true"></i></a> </div>
             <div class="home_collection">
                 <ul>
                     @php
@@ -15,13 +15,15 @@
                             $image = get_field($field, 'image');
                             echo '<li>
                                     <div class="cate_block"  style="background-image: url(storage/'.$image.')">
+                                        <div class="title">
+                                            '.$cates[$i]->name.'
+                                        </div>
                                         <div class="cover_title">
-                                            <span class="title">'.$cates[$i]->name.'</span>
                                             <div class="discover">
                                                 <a href="'.$cates[$i]->url.'">Discover
-                                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                                    <i class="ion ion-ios-arrow-thin-right" aria-hidden="true"></i>
                                                 </a>
-                                            </span>
+                                            </div>
                                         </div>
                                       </div>
                                 </li>';

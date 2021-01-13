@@ -165,7 +165,7 @@ body {
     display: inline-block;
     margin-right: 40px;
     position: relative;
-    border-radius: 20px
+    border-radius: 20px;
 }
 
 .home_collection li:last-child {
@@ -187,6 +187,12 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0px;
+    right: 0px;
+    transition: bottom 0.4s, right 0.4s, width 0.4s, height 0.4s
 }
 
 .home_collection li:hover .cate_block a{
@@ -214,8 +220,8 @@ body {
     letter-spacing: 0em;
     text-align: center;
     display: inline-block;
-    /*width: 200px;*/
     color: white;
+    padding: 70px;
 }
 
 .home_collection li:hover .discover {
@@ -233,6 +239,7 @@ body {
     width: 100%;
     font-style: normal;
     font-weight: bold;
+    transition: bottom 0.4s;
 }
 
 .home_collection .discover a {
@@ -251,7 +258,7 @@ body {
     color: white;
 }
 
-.home_collection .discover a .fa {
+.home_collection .discover a i {
     margin-left: 35px;
 }
 
@@ -426,12 +433,11 @@ body .scrollup {
     color: #666666;
   }
   
-.footer_logo
-  {
+.footer_logo {
     padding-left: 50px;
-  }
-.footer h3
-{
+ }
+  
+.footer h3 {
     font-family: Quicksand;
     font-style: normal;
     font-weight: bold;
@@ -570,6 +576,15 @@ body .scrollup {
     position: relative;
 }
 
+.subcate .white_bg {
+    background-color: white;
+    position: absolute;
+    z-index: 0;
+    height: 182px;
+    width: 100%;
+    bottom: 0;
+}
+
 .subcate .subcate_name {
     position: absolute;
     z-index: 1;
@@ -591,7 +606,7 @@ body .scrollup {
     bottom: 0px;
     color: white;
     background-color: #118A20;
-    display: none;
+    opacity: 0;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -601,6 +616,8 @@ body .scrollup {
     padding-left: 30px;
     padding-right: 30px;
     font-family: Quicksand;
+    border-radius: 0 0 20px 20px;
+    transition: opacity 0.9s;
 }
 
 .subcate .subcate_desc p {
@@ -611,17 +628,18 @@ body .scrollup {
     line-height: 48px;
     letter-spacing: 0em;
     text-align: center;
-    padding-top: 45px;
-    padding-bottom: 45px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .subcate .subcate_item:hover .subcate_desc {
-    display: block;
+    opacity: 1;
 }
 
 .subcate .subcate_item:hover .subcate_btn {
     background-color: white;
-    color: #118A20
+    color: #118A20;
+    border-color: white;
 }
 
 .subcate .cover_subcate_btn {
@@ -631,6 +649,11 @@ body .scrollup {
     width: 100%;
     text-align: center;
 }
+
+.subcate .cover_subcate_btn i {
+    margin-left: 25px;
+}
+
 .subcate .subcate_btn {
     font-family: Playfair;
     font-size: 18px;
@@ -639,9 +662,64 @@ body .scrollup {
     line-height: 24px;
     letter-spacing: 0em;
     text-align: left;
-
+    padding: 10px 25px 10px 25px;
 }
 
+.subcate .subcate_btn a {
+    margin-left: 20px;
+}
+
+.relative_cate .cate_block {
+    height: 655px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.relative_cate .cate_block .title {
+    font-family: Playfair Display;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 85px;
+    letter-spacing: 0em;
+}
+
+.relative_cate .cate_block .discover {
+    width: 100%;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.relative_cate .cate_block .discover a {
+    height: 44px;
+    width: 169px;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: inline-block;
+    padding-left: 20px;
+    padding-top: 8px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Playfair;
+    color: white;
+}
+
+.relative_cate .cate_block .discover a:hover {
+    text-decoration: none;
+    background-color: white;
+    color: #118A20
+}
+
+.relative_cate .cate_block .discover a i {
+    margin-left: 35px
+}
 /* flickity scroll slider */
 /* external css: flickity.css */
 * { box-sizing: border-box; }
@@ -655,12 +733,17 @@ body { font-family: sans-serif; }
 }
 
 .carousel-cell {
-  width: 5%;
-  height: 350px;
-  margin-right: 10px;
-  /* background: #8C8; */
-  border-radius: 5px;
+  height: 300px;
+  width: 280px;
+  border-radius: 20px;
   counter-increment: carousel-cell;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-left: 15px;
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
    
 }
 
@@ -676,31 +759,27 @@ body { font-family: sans-serif; }
   line-height: 200px;
   font-size: 80px;
   color: white;
+  
 }
-.carousel-cell-image
-{
+
+.carousel-cell-image {
     width: 280px;
-height: 300px;
-background: #FFFFFF;
-border-radius: 20px;
+    height: 300px;
+    background: #FFFFFF;
+    border-radius: 20px;
 
 }
-.carousel-cell-image:hover
-{
+.carousel-cell-image:hover {
    width:290px;
-    height: 310px;
-box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.5);
+   height: 310px;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.5);
 }
-.centered {
-    width: 200px;
-    /* position: absolute; */
-    top: 50%;
-    /* left: 50%; */
-    transform: translate(-30%, -150%);
+
+.carousel-cell .centered {
+    width: 100%;
     color: #ffffff;
-    text-align:center;
-    margin-left: -120px;
-    font-family: Playfair Display;
+    text-align: center;
+    font-family: Playfair;
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
@@ -709,17 +788,19 @@ box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.5);
     text-transform: capitalize;
 
 }
-.btn_discovery a
-{
-    width: 169px;
+
+.carousel-cell .btn_discovery {
+    text-align: center;
+}
+
+.carousel-cell .btn_discovery a {
     height: 44px;
     background: #FFFFFF;
     border: 1px solid #FFFFFF;
     box-sizing: border-box;
     border-radius: 5px;
-    margin-top: 200px;
-    margin-left: -50px;
-    /* display:none; */
+    margin-top: 30px;
+    display: none;
     font-family: Playfair Display;
     font-style: normal;
     font-weight: bold;
@@ -727,4 +808,15 @@ box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.5);
     line-height: 24px;
     text-transform: capitalize;
     color: #118A20;
+    padding-left: 30px;
+    padding-top: 8px;
+}
+
+.carousel-cell:hover .btn_discovery a {
+    display: inline-block
+}
+
+.carousel-cell .btn_discovery a i {
+    margin-left: 30px;
+    margin-right: 20px
 }
