@@ -15,13 +15,13 @@
     <div class="row cate_slder">
         <div class="carousel">
             @foreach ($category->children()->get() as $child_category)
-                   <div class="carousel-cell" style="background-image: url({{ RvMedia::getImageUrl(get_field($child_category, 'image'), null, false, RvMedia::getDefaultImage()) }} )"> 
+                   <div class="carousel-cell" style="background-image: url({{ RvMedia::getImageUrl(get_field($child_category, 'image'), null, false, RvMedia::getDefaultImage()) }} )">
                        <div class="cell">
                            <div>
                                 <div class="centered">{{ $child_category->name }}</div>
                                  <div class="btn_discovery">
                                      <a href="{{ $child_category->url }}" class="btn btn-default subcate_btn discover">
-                                         Discover 
+                                         Discover
                                          <i class="ion ion-ios-arrow-thin-right" aria-hidden="true"></i>
                                      </a>
                                  </div>
@@ -76,7 +76,7 @@
         </div>
         @endforeach
     </div>
-</div>    
+</div>
 <div class="row relative_cate">
     @php
         $cates = get_featured_categories(3);
