@@ -1,6 +1,10 @@
 <div class="row">
-
     <div class="footer">
+        <div class="main_content pos_relative">
+            <span class="btn_scrollup">
+
+            </span>
+        </div>
         <div class="footer_info">
             <div class="row">
                 <div class="col-md-4 footer_social col">
@@ -14,7 +18,6 @@
                         @endif
                         <p>{{ theme_option('about-us') }}</p>
                     </div>
-                    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
                     <div class="social-links">
                         <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
                         <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
@@ -27,8 +30,9 @@
             </div>
         </div>
 
-        <div class="footer_text">
-            <div>@2020 vinatex international. Designed & Developed by: <strong>Avalon Solution</strong> </div>
+        <div class="footer_text page-copyright">
+            {{-- <div>@2020 vinatex international. Designed & Developed by: <strong>Avalon Solution</strong> </div> --}}
+            <div>{!! clean(theme_option('copyright')) !!}</div>
         </div>
     </div>
 
