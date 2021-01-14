@@ -24,7 +24,8 @@
                                  <i class="ion ion-ios-arrow-thin-right" aria-hidden="true"></i>
                              </a>
                          </div>
-                       </div> 
+                       </div>
+                       <div class="mask"></div>
                  </div>
             @endforeach
         </div>

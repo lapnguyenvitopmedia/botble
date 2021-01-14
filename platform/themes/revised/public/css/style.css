@@ -116,7 +116,7 @@ body {
 
 .mainmenu li a {
     color: black;
-    padding-bottom: 52px;
+    padding-bottom: 48px;
     font-weight: bolder;
     font-size: 25px;
     letter-spacing: 0.1em
@@ -914,6 +914,14 @@ color: #FFFFFF;
     color: #118A20;
     padding-left: 30px;
     padding-top: 8px;
+}
+
+.carousel-cell .mask {
+    width:100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #091728 100%);
+    border-radius: 20px;
+    position: absolute;
 }
 
 .highlight_title{

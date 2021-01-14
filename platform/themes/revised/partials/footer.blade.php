@@ -18,7 +18,6 @@
                         @endif
                         <p>{{ theme_option('about-us') }}</p>
                     </div>
-                    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
                     <div class="social-links">
                         <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
                         <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
