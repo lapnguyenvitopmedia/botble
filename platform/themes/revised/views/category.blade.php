@@ -102,78 +102,101 @@
 @else
 {{-- Child category --}}
 {{-- highlights --}}
-<div class="highlights">
-    <div class="highlight_title">Product Highlights</div>
+<div class="row">
+    <div class="main_content">
+    <div class="highlight_title row">Product Highlights</div>
+
     <div class="row">
         @for($i = 1; $i <= 3; $i++) @php $img=get_field($category, 'highlight_img_' .$i);
             $highlight=get_field($category, 'highlight_' .$i); @endphp
             <div class="highlight_item col-md-4"
             style="background-image: url('{{ RvMedia::getImageUrl($img, null, false, RvMedia::getDefaultImage()) }}');">
-            <div class="">
                 <p class="h_name">{{ $highlight }}</p>
-            </div>
             </div>
         @endfor
     </div>
-</div>
 
-{{-- info --}}
-<div class="row chcate_info">
-    <div class="row chmain_content">
-        <div class="chcinfo col-md-9">
-            <p class="chcinfo_name">{{ $category->name }}</p>
-            <p class="chcinfo_desc">{{ get_field($category, 'info') }}</p>
-        </div>
-        <div class=" col-md-3 chcover_download_btn">
-            <a class="btn btn-default btn-download" href="#">
-                <span>Request A Sample</span>
-                <img class="" src="{{ RvMedia::getImageUrl('/frame.png', null, false, null) }}" alt="">
-                {{-- <i class="ion ion-ios-pricetags-outline" aria-hidden="true"></i> --}}
-            </a>
+
+    {{-- info --}}
+    <div class="row chcate_info">
+        <div class="row chmain_content">
+            <div class="chcinfo col-md-9">
+                <p class="chcinfo_name">{{ $category->name }}</p>
+                <p class="chcinfo_desc">{{ get_field($category, 'info') }}</p>
+            </div>
+            <div class=" col-md-3 chcover_download_btn">
+                <a class="btn btn-default btn-download" href="#">
+                    <span>Request A Sample</span>
+                    <img class="" src="{{ RvMedia::getImageUrl('/frame.png', null, false, null) }}" alt="">
+                    {{-- <i class="ion ion-ios-pricetags-outline" aria-hidden="true"></i> --}}
+                </a>
+            </div>
         </div>
     </div>
-</div>
 
-{{-- posts --}}
-<div class="row">
-    <div class="subcate main_content">
-        {{-- @php
-            dd($posts)
-        @endphp --}}
-        @foreach ($posts->chunk(2) as $chunk)
-        <div class="row subcate_row">
-            @foreach ($chunk as $post)
-            <div class="col-md-6">
-                <div class="subcate_item_big"
-                    style="background-image:url({{ RvMedia::getImageUrl($post->image, null, false, RvMedia::getDefaultImage()) }})">
-                    <div class="subcate_name">
-                            <div class="div_bigger">
-                                <p class="tile_big">{{ $post->name }}</p>
-                                <p class="text_big">{{ $post->description }}</p>
-                            </div>
-                            <div class="div_big">
-                                <img class="img_big" src="{{ RvMedia::getImageUrl(get_field($post, 'post_logo'), null, false, RvMedia::getDefaultImage()) }}" alt="{{ $post->name }}">
-                                @if (get_field($post, 'is_repreve')==1)
-                                    <p class="p_big">Repreve</p>
-                                @endif
-                                <div class="cover_subcate_btn">
-                                    <a href="{{ $post->url }}" class="subcate_btn">
-                                        <i class="ion ion-ios-arrow-thin-right" aria-hidden="true"></i>
-                                    </a>
+    {{-- posts --}}
+    <div class="row">
+        <div class="subcate main_content">
+            {{-- @php
+                dd($posts)
+            @endphp --}}
+            @foreach ($posts->chunk(2) as $chunk)
+            <div class="row subcate_row">
+                @foreach ($chunk as $post)
+                <div class="col-md-6">
+                    <div class="subcate_item_big"
+                        style="background-image:url({{ RvMedia::getImageUrl($post->image, null, false, RvMedia::getDefaultImage()) }})">
+                        <div class="subcate_name">
+                                <div class="div_bigger">
+                                    <p class="tile_big">{{ $post->name }}</p>
+                                    <p class="text_big">{{ $post->description }}</p>
                                 </div>
-                            </div>
+                                <div class="div_big">
+                                    <img class="img_big" src="{{ RvMedia::getImageUrl(get_field($post, 'post_logo'), null, false, RvMedia::getDefaultImage()) }}" alt="{{ $post->name }}">
+                                    @if (get_field($post, 'is_repreve')==1)
+                                        <p class="p_big">Repreve</p>
+                                    @endif
+                                    <div class="cover_subcate_btn">
+                                        <a href="{{ $post->url }}" class="subcate_btn">
+                                            <i class="ion ion-ios-arrow-thin-right" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
 
-                        </div>
+                            </div>
+                    </div>
                 </div>
+                @endforeach
             </div>
             @endforeach
+            <div class="bcover_subcate_btn">
+                <a href="#" class="btn btn-default loadmore">
+                    Load more
+                    <i class="ion ion-ios-arrow-thin-down" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
-        @endforeach
-        <a href="#" class="btn btn-default subcate_btn">
-            Load more
-            <i class="ion ion-ios-arrow-thin-down" aria-hidden="true"></i>
-        </a>
+        
     </div>
-
+    <div class="row relative_cate">
+    @php
+        $cates = get_featured_categories(2);
+        for($i=0; $i<count($cates); $i++) {
+            $field = \Botble\Blog\Models\Category::find($cates[$i]->id);
+            $image = get_field($field, 'image');
+            echo '<div class="cate_block col-md-6" style="background-image: url(storage/'.$image.')">
+                      <div class="cover_title">
+                            <span class="title">'.$cates[$i]->name.'</span>
+                            <div class="discover">
+                                <a href="'.$cates[$i]->url.'">Discover
+                                    <i class="ion ion-ios-arrow-thin-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                      </div>
+                </div>';
+        }
+    @endphp
+</div>
+</div>
 </div>
 @endif
