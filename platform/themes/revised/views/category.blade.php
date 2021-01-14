@@ -16,14 +16,16 @@
         <div class="carousel">
             @foreach ($category->children()->get() as $child_category)
                    <div class="carousel-cell" style="background-image: url({{ RvMedia::getImageUrl(get_field($child_category, 'image'), null, false, RvMedia::getDefaultImage()) }} )"> 
-                       <div>
-                        <div class="centered">{{ $child_category->name }}</div>
-                         <div class="btn_discovery">
-                             <a href="{{ $child_category->url }}" class="btn btn-default subcate_btn discover">
-                                 Discover 
-                                 <i class="ion ion-ios-arrow-thin-right" aria-hidden="true"></i>
-                             </a>
-                         </div>
+                       <div class="cell">
+                           <div>
+                                <div class="centered">{{ $child_category->name }}</div>
+                                 <div class="btn_discovery">
+                                     <a href="{{ $child_category->url }}" class="btn btn-default subcate_btn discover">
+                                         Discover 
+                                         <i class="ion ion-ios-arrow-thin-right" aria-hidden="true"></i>
+                                     </a>
+                                 </div>
+                            </div>
                        </div>
                        <div class="mask"></div>
                  </div>
@@ -145,30 +147,23 @@
                 <div class="subcate_item_big"
                     style="background-image:url({{ RvMedia::getImageUrl($post->image, null, false, RvMedia::getDefaultImage()) }})">
                     <div class="subcate_name">
-                        <div class="row">
-                            <div class="col-sm-9 div_bigger">
+                            <div class="div_bigger">
                                 <p class="tile_big">{{ $post->name }}</p>
                                 <p class="text_big">{{ $post->description }}</p>
                             </div>
-                            <div class="col-sm-3 div_big">
+                            <div class="div_big">
                                 <img class="img_big" src="{{ RvMedia::getImageUrl(get_field($post, 'post_logo'), null, false, RvMedia::getDefaultImage()) }}" alt="{{ $post->name }}">
                                 @if (get_field($post, 'is_repreve')==1)
                                     <p class="p_big">Repreve</p>
                                 @endif
                                 <div class="cover_subcate_btn">
-                                    <a href="{{ $post->url }}" class="btn btn-default subcate_btn">
+                                    <a href="{{ $post->url }}" class="subcate_btn">
                                         <i class="ion ion-ios-arrow-thin-right" aria-hidden="true"></i>
                                     </a>
                                 </div>
                             </div>
 
                         </div>
-                    </div>>
-                    <div class="subcate_desc">
-                        <p> {{ $post->name }} </p>
-                        {{ $post->description }}
-                    </div>
-
                 </div>
             </div>
             @endforeach

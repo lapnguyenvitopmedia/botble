@@ -13,6 +13,7 @@
                         for($i=0; $i<count($cates); $i++) {
                             $field = \Botble\Blog\Models\Category::find($cates[$i]->id);
                             $image = get_field($field, 'image');
+                            $logo = get_field($field, 'logo');
                             echo '<li>
                                     <div class="cate_block"  style="background-image: url(storage/'.$image.')">
                                         <div class="title">
@@ -24,7 +25,11 @@
                                                     <i class="ion ion-ios-arrow-thin-right" aria-hidden="true"></i>
                                                 </a>
                                             </div>
-                                        </div>
+                                        </div>';
+                                        if($logo) {
+                                            echo '<img class="cate_logo" src="storage/logo-sinnika-small.png" />';
+                                        }
+                                      echo '
                                       </div>
                                 </li>';
                         }
