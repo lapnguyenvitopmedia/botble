@@ -64,7 +64,7 @@
                         {{ $child_category->description }}
                     </div>
                     <div class="cover_subcate_btn">
-                        <a href="{{ $child_category->url }}" class="btn btn-default subcate_btn">
+                        <a href="{{ $child_category->url }}" class="btn btn-default item_subcate_btn">
                             View All
                             <i class="ion ion-ios-arrow-thin-right" aria-hidden="true"></i>
                         </a>

@@ -578,6 +578,69 @@ body .scrollup {
     margin-bottom: 0px;
 }
 
+.subcate .white_bg {
+    background-color: white;
+    position: absolute;
+    z-index: 0;
+    height: 182px;
+    width: 100%;
+    bottom: 0;
+}
+
+.subcate .subcate_item_big .subcate_name {
+    position: absolute;
+    z-index: 1;
+    bottom: 0px;
+    font-family: Playfair;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0em;
+    width: 100%;
+    height: 215px;
+    text-align: left;
+}
+
+.subcate .subcate_item .subcate_desc {
+    position: absolute;
+    z-index: 2;
+    height: 324px;
+    width: 100%;
+    bottom: 0px;
+    color: white;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+    font-family: Quicksand;
+    border-radius: 0 0 20px 20px;
+    opacity: 0;
+    background: #118A20;
+    transition: opacity 0.9s;
+}
+
+.subcate .div_big {
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+    height: 215px;
+}
+
+.subcate .subcate_item .subcate_desc p {
+    font-family: Playfair;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
 .subcate_item {
     width: 470px;
     height: 600px;
@@ -590,16 +653,7 @@ body .scrollup {
     position: relative;
 }
 
-.subcate .white_bg {
-    background-color: white;
-    position: absolute;
-    z-index: 0;
-    height: 182px;
-    width: 100%;
-    bottom: 0;
-}
-
-.subcate .subcate_name {
+.subcate_item .subcate_name {
     position: absolute;
     z-index: 1;
     bottom: 0px;
@@ -611,45 +665,7 @@ body .scrollup {
     letter-spacing: 0em;
     text-align: center;
     width: 100%;
-    height: 215px;
-    text-align: left;
-}
-
-.subcate .subcate_desc {
-    position: absolute;
-    z-index: 2;
-    height: 230px;
-    width: 100%;
-    bottom: 0px;
-    color: white;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 23px;
-    letter-spacing: 0em;
-    text-align: center;
-    padding-left: 30px;
-    font-family: Quicksand;
-    border-radius: 0 0 20px 20px;
-}
-
-.subcate .div_big {
-    position: absolute;
-    bottom: 0px;
-    right: 20px;
-    height: 215px;
-}
-
-.subcate .subcate_desc p {
-    font-family: Playfair;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 48px;
-    letter-spacing: 0em;
-    text-align: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    height: 147px;
 }
 
 .subcate .subcate_item:hover .subcate_desc {
@@ -659,26 +675,45 @@ body .scrollup {
     border-bottom-right-radius: 20px;
 }
 
-.subcate .subcate_item:hover .subcate_btn {
+.subcate .subcate_item .item_subcate_btn {
+    font-family: Playfair;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+}
+
+.subcate .subcate_item:hover .item_subcate_btn {
     background-color: white;
     color: #118A20;
     border-color: white;
 }
 
-.subcate .cover_subcate_btn {
+
+.subcate .subcate_item .cover_subcate_btn {
     position: absolute;
     z-index: 3;
     bottom: 25px;
     right: 0px;
+    width: 100%
+}
+
+.subcate .subcate_item_big .cover_subcate_btn {
+    position: absolute;
+    z-index: 3;
+    bottom: 25px;
+    right: 0px;
+    width: 100%;
+    text-align: right
 }
 
 .bcover_subcate_btn {
     text-align: center;
     margin-top: 95px;
-    margin-bottom: 65px;
 }
 
-.bcover_subcate_btn .loadmore{
+.bcover_subcate_btn .loadmore {
     color: white;
     border: none;
     background: #118A20;
@@ -695,10 +730,20 @@ body .scrollup {
     border-radius: 3px;
 }
 
-.subcate .cover_subcate_btn i {
-    padding: 0px 7px;
+.subcate .subcate_item_big .cover_subcate_btn i {
+    padding: 0px 8px;
     margin: 0px;
     border: 1px solid #118A20;
+    border-radius: 3px;
+    color: #118A20;
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+.subcate .subcate_item .cover_subcate_btn i {
+    padding: 0px 7px;
+    margin: 0px;
+    border: none;
     border-radius: 3px;
     color: #118A20;
     font-weight: bolder
@@ -706,6 +751,10 @@ body .scrollup {
 
 .subcate .subcate_btn a {
     margin-left: 20px;
+}
+
+.relative_cate {
+    margin-top: 125px;
 }
 
 .relative_cate .cate_block {
