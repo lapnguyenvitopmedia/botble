@@ -143,7 +143,9 @@ body {
     /* border: 1px solid gray; */
 }
 .footer_info .list {
-    list-style: none
+    list-style: none;
+    padding-left: 0px;
+
 }
 
 .home_content, .main_content {
@@ -439,11 +441,11 @@ body .scrollup {
     /* or 175% */
     color: #666666;
   }
-  
+
 .footer_logo {
     padding-left: 50px;
  }
-  
+
 .footer h3 {
     font-family: Quicksand;
     font-style: normal;
@@ -863,7 +865,7 @@ color: #FFFFFF;
   line-height: 200px;
   font-size: 80px;
   color: white;
-  
+
 }
 
 .carousel-cell-image {
@@ -1000,19 +1002,6 @@ color: #FFFFFF;
     margin-left: -27px;
 }
 
-.div_big
-{
-    /* margin-left: -36px;
-    margin-top:100px;
-    text-align:right; */
-    /* width:167px;
-    margin-top:100px; */
-    
-}
-
-
-
-
 .carousel-cell:hover .btn_discovery a {
     display: inline-block
 }
@@ -1030,5 +1019,24 @@ color: #FFFFFF;
     position: absolute;
     background-image: url(/storage/btn-scrollup.jpg);
     background-repeat: no-repeat;
+}
+.fa-paper-plane
+{
+    position: absolute;
+    left: 88.59%;
+    right: 10.16%;
+    top: 38.6%;
+    bottom: 13.95%;
+    color: #118A20;
+    margin-bottom: 105px;
+}
+.language_bar_list li a img
+{
+    width: 20px;
+    height: 20px;
+    /* background: #FFFFFF; */
+    /* position: relative; */
+    border-radius: 50px;
+    box-sizing: border-box;
 }
 

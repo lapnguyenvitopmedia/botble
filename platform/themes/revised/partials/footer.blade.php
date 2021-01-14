@@ -2,7 +2,7 @@
     <div class="footer">
         <div class="main_content pos_relative">
             <span class="btn_scrollup">
-                
+
             </span>
         </div>
         <div class="footer_info">
@@ -30,8 +30,9 @@
             </div>
         </div>
 
-        <div class="footer_text">
-            <div>@2020 vinatex international. Designed & Developed by: <strong>Avalon Solution</strong> </div>
+        <div class="footer_text page-copyright">
+            {{-- <div>@2020 vinatex international. Designed & Developed by: <strong>Avalon Solution</strong> </div> --}}
+            <div>{!! clean(theme_option('copyright')) !!}</div>
         </div>
     </div>
 

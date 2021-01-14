@@ -8,6 +8,7 @@
         <div class="form-group">
             <input type="text" id="fname" name="fname" placeholder="YOUR EMAIL">
             {{-- <input type="submit"> --}}
+            <i class="fa fa-paper-plane"></i>
         </div>
     </div>
     <div class="aside-box-content">
