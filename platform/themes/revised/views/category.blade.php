@@ -176,8 +176,9 @@
                 </a>
             </div>
         </div>
-        
+
     </div>
+    {{-- end post --}}
     <div class="row relative_cate">
     @php
         $cates = get_featured_categories(2);

@@ -39,8 +39,35 @@
                 <div class="col-md-3">
                     <div class="top-right-header">
                         <div class="header_search">
-                            <i class="fa fa-search"></i>
-                            <input class="input_search" type="text" placeholder="search..." />
+                            <form class="navbar-form navbar-right" role="search"
+                              accept-charset="UTF-8"
+                              action="{{ route('public.search') }}"
+                              method="GET">
+
+                                <i class="fa fa-search"></i>
+
+                                <input class="input_search" type="text" placeholder="search..." name="q"/>
+                                {{-- <input type="text" class="form-control" placeholder="{{ __('Search news...') }}" name="q"> --}}
+                            </form>
+
+                            {{-- <form class="navbar-form navbar-right" role="search"
+                              accept-charset="UTF-8"
+                              action="{{ route('public.search') }}"
+                              method="GET">
+                            <div class="tn-searchtop">
+                                <button type="button" class="btn btn-default js-btn-searchtop">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                                <button type="submit" class="btn btn-default">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="{{ __('Search news...') }}" name="q">
+                                </div>
+                            </div>
+                            <button id="tn-searchtop" class="js-btn-searchtop" type="button"><i class="fa fa-search"></i>
+                            </button>
+                        </form> --}}
                         </div>
                         {!! apply_filters('language_switcher') !!}
                     </div>
@@ -66,7 +93,7 @@
                         </div>
                     @else
                         <div class="category_image" style="background-image: url({{ theme_option('home_banner') ? RvMedia::getImageUrl(theme_option('home_banner')) : Theme::asset()->url('images/page-intro-02.jpg') }})">
-                            
+
                         </div>
                         <div class="slider product">
 
