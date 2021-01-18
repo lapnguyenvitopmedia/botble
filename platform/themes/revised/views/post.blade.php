@@ -5,11 +5,11 @@
         <h3 class="post_title">{{ $post->name }}</h3>
         <div class="post_content">
             <img src="{{ RvMedia::getImageUrl($post->image, 'thumb', false, RvMedia::getDefaultImage()) }}" alt="{{ $post->name }}">
-            <hr />
+            <hr class="hr-text" data-content="General Info">
             {{ $post->description }}
-            <hr />
+            <hr class="hr-text" data-content="Material Description">
             {{ $post->content }}
-            <hr />
+            <hr class="hr-text" data-content="Material Type">
             @php
                 $general_info = get_field($post, 'general_info');
                 $type = get_field($post, 'type');
@@ -18,7 +18,10 @@
                 echo $type.'<hr />';
                 echo $attributes.'<hr />';
             @endphp
-            
+
         </div>
     </header>
 </article>
+
+
+
